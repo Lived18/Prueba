@@ -17,10 +17,12 @@ h3 {
     color: #ffcc00;
     font-size: 2.2em; /* Aumenta el tamaño del h3 */
 }
+
+/* HEADER AJUSTADO */
 header {
     background-color: #000;
     color: #fff;
-    padding: 16px;
+    padding: 6px 0; /* Menor padding para header más bajo */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -30,39 +32,80 @@ header {
     left: 0;
     width: 100%;
     z-index: 100;
+    min-height: 56px; /* Altura mínima más baja */
 }
 
-/* Nuevo: estructura interna para centrar la barra de búsqueda */
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-    padding: 10px 0;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 8px;
 }
 
 /* Botón ManaosWeb a la izquierda */
 .header-left {
-    flex: 1;
     display: flex;
-    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
 }
 
 /* Barra de búsqueda centrada */
 .header-center {
-    flex: 1 1 200px;
+    flex: 2;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 0;
 }
 
 /* Botón Reportar a la derecha */
 .header-right {
-    flex: 1;
     display: flex;
+    align-items: center;
     justify-content: flex-end;
-    margin-right: 24px; /* Agrega este margen para separar el botón del borde derecho */
+    flex: 1;
+    min-width: 0;
+    margin-right: 0;
+}
+
+/* BOTONES HEADER */
+.header-left button,
+.header-right button {
+    font-size: 1.1em;
+    padding: 6px 16px;
+    border-radius: 8px;
+    border: none;
+    background: #fff;
+    color: #222;
+    cursor: pointer;
+    margin: 0 2px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Botón de exclamación amarillo */
+.reportar-btn {
+    font-size: 1.5em;
+    font-weight: bold;
+    background: #ffeb3b;
+    color: #222;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 0;
+    border: none;
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Ajusta el formulario de búsqueda */
@@ -119,37 +162,16 @@ header form button {
     font-size: 1em;         /* opcional: asegura consistencia */
 }
 
-@media (max-width: 700px) {
-    .header-center {
-        flex: 2;
-        min-width: 120px;
-    }
-    header form {
-        margin-right: 0;
-    }
-    .header-right {
-        margin-right: 8px; /* Menor margen en pantallas chicas */
-    }
-}
-
-.header-left button,
-.header-right button,
-.header-center button {
-    font-size: 1.1em;
-    padding: 8px 16px;
-    border-radius: 8px;
-    border: none;
-    background: #fff;
-    color: #222;
-    cursor: pointer;
-    margin: 0 2px;
-}
-
 #buscador-locales {
     display: flex;
     gap: 5px;
     width: 100%;
     max-width: 350px;
+    border: 2px solid #fff; /* Contorno blanco */
+    border-radius: 8px;
+    background: #000;
+    padding: 2px 6px;
+    align-items: center;
 }
 
 #busqueda-locales {
@@ -158,36 +180,45 @@ header form button {
     border-radius: 8px;
     border: none;
     font-size: 1em;
+    background: #000;
+    color: #fff;
+    outline: none;
 }
 
-.reportar-btn {
-    font-size: 1.5em;
-    font-weight: bold;
-    background: #ffeb3b;
-    color: #222;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#buscador-locales button {
+    background: #000;
+    border: none;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: inherit;
+    font-size: 1em;
 }
 
-@media (max-width: 600px) {
+#buscador-locales button:hover {
+    background: #fff;
+    color: #000;
+}
+
+@media (max-width: 700px) {
     .header-content {
         flex-direction: column;
         align-items: stretch;
         gap: 8px;
+        padding: 0 4px;
     }
     .header-center {
         order: 2;
         margin: 0 0 8px 0;
+        width: 100%;
     }
     .header-left, .header-right {
         order: 1;
         display: flex;
         justify-content: space-between;
+        width: 100%;
     }
     .header-right {
         justify-content: flex-end;
