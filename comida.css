@@ -35,9 +35,11 @@ header {
 /* Nuevo: estructura interna para centrar la barra de búsqueda */
 .header-content {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 0;
 }
 
 /* Botón ManaosWeb a la izquierda */
@@ -49,9 +51,10 @@ header {
 
 /* Barra de búsqueda centrada */
 .header-center {
-    flex: 2;
+    flex: 1 1 200px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 /* Botón Reportar a la derecha */
@@ -126,6 +129,71 @@ header form button {
     }
     .header-right {
         margin-right: 8px; /* Menor margen en pantallas chicas */
+    }
+}
+
+.header-left button,
+.header-right button,
+.header-center button {
+    font-size: 1.1em;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    background: #fff;
+    color: #222;
+    cursor: pointer;
+    margin: 0 2px;
+}
+
+#buscador-locales {
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    max-width: 350px;
+}
+
+#busqueda-locales {
+    flex: 1;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1em;
+}
+
+.reportar-btn {
+    font-size: 1.5em;
+    font-weight: bold;
+    background: #ffeb3b;
+    color: #222;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 600px) {
+    .header-content {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+    .header-center {
+        order: 2;
+        margin: 0 0 8px 0;
+    }
+    .header-left, .header-right {
+        order: 1;
+        display: flex;
+        justify-content: space-between;
+    }
+    .header-right {
+        justify-content: flex-end;
+    }
+    .header-left {
+        justify-content: flex-start;
     }
 }
 
