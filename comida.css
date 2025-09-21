@@ -1,4 +1,3 @@
-/* Fuente manuscrita parecida */
 @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
 
 body {
@@ -37,7 +36,7 @@ header {
 
 .header-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;      /* Cambia de space-between a center */
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
@@ -45,6 +44,19 @@ header {
     max-width: 900px;
     margin: 0 auto;
     padding: 0 8px;
+}
+
+.header-left,
+.header-center {
+    flex: 0 0 auto;               /* No ocupan espacio extra */
+}
+
+.header-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+    margin: 0;
 }
 
 /* Botón ManaosWeb a la izquierda */
@@ -64,19 +76,11 @@ header {
     min-width: 0;
 }
 
-/* Botón Reportar a la derecha */
-.header-right {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex: 1;
-    min-width: 0;
-    margin-right: 0;
-}
+
 
 /* BOTONES HEADER */
 .header-left button,
-.header-right button {
+.header-center button {
     font-size: 1.1em;
     padding: 6px 16px;
     border-radius: 8px;
@@ -91,68 +95,21 @@ header {
     justify-content: center;
 }
 
-/* Botón de exclamación amarillo */
-.reportar-btn {
-    font-size: 1.5em;
-    font-weight: bold;
-    background: #ffeb3b;
-    color: #222;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    padding: 0;
-    border: none;
-    margin-left: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-/* Ajusta el formulario de búsqueda */
-header form {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    margin: 0;
-}
-
-/* Elimina o comenta estas reglas para el input y el botón dentro del header */
-/*
-header form input[type="text"] {
-    padding: 8px;
-    border-radius: 6px;
-    border: 2px solid #fff;
-    background: #000;
-    color: #fff;
-    outline: none;
-}
-
-header form button {
-    background: #000;
-    border: 2px solid #fff;
-    color: #fff;
-    padding: 8px 12px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s;
-    font-family: inherit;
-    font-size: 1em;
-}
-*/
 
 /* BUSCADOR */
 header form {
     display: flex;
     align-items: center;
     gap: 6px;
-    margin-right: 24px; /* Agrega este margen para separar el botón del borde derecho */
+    margin-right: 24px;
 }
 
 #buscador-locales {
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: 260px;      /* Un poco más ancho para que entren input y botón */
+    max-width: 260px;
     border: 2px solid #fff;
     border-radius: 8px;
     background: #000;
@@ -173,7 +130,7 @@ header form {
     outline: none;
 }
 
-/* Botón de lupa pequeño y cuadrado, con borde blanco */
+/* Botón de lupa */
 #buscador-locales button {
     background: #000;
     border: none;
@@ -203,33 +160,26 @@ header form {
     color: #000;
 }
 
+/* 📱 Ajustes responsive para móviles */
 @media (max-width: 700px) {
     .header-content {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 8px;
-        padding: 0 4px;
-    }
-    .header-center {
-        order: 2;
-        margin: 0 0 8px 0;
-        width: 100%;
-    }
-    .header-left, .header-right {
-        order: 1;
-        display: flex;
+        flex-direction: row;     /* Mantiene todo en una fila */
+        align-items: center;     /* Asegura misma altura */
         justify-content: space-between;
-        width: 100%;
+        gap: 6px;
     }
-    .header-right {
-        justify-content: flex-end;
-    }
+
     .header-left {
-        justify-content: flex-start;
+        flex-shrink: 0; /* El botón Inicio mantiene su tamaño */
+    }
+
+    .header-center {
+        flex: 1; /* Buscador ocupa el espacio disponible */
+    }
+    .reportar-btn {
+        flex-shrink: 0;
     }
 }
-
-
 
 .locales-lista {
     max-width: 500px;
@@ -277,8 +227,6 @@ header form {
 .local .redes img:hover {
     transform: scale(1.1);
 }
-
-
 
 /* FOOTER */
 footer {
