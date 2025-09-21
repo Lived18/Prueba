@@ -116,31 +116,8 @@ header form {
     margin: 0;
 }
 
-header button {
-    background: none;
-    color: #fff;
-    border: 2px solid #fff;
-    padding: 8px 16px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: all 0.3s;
-    font-family: inherit;   /* 👈 fuerza que use la misma fuente que el body */
-    font-size: 1em;         /* opcional: asegura consistencia */
-}
-header button:hover {
-    background-color: #fff;
-    color: #000;
-}
-
-/* BUSCADOR */
-header form {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    margin-right: 24px; /* Agrega este margen para separar el botón del borde derecho */
-}
-
+/* Elimina o comenta estas reglas para el input y el botón dentro del header */
+/*
 header form input[type="text"] {
     padding: 8px;
     border-radius: 6px;
@@ -158,46 +135,70 @@ header form button {
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.3s;
-    font-family: inherit;   /* 👈 fuerza que use la misma fuente que el body */
-    font-size: 1em;         /* opcional: asegura consistencia */
+    font-family: inherit;
+    font-size: 1em;
+}
+*/
+
+/* BUSCADOR */
+header form {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-right: 24px; /* Agrega este margen para separar el botón del borde derecho */
 }
 
 #buscador-locales {
     display: flex;
-    gap: 5px;
+    align-items: center;
     width: 100%;
-    max-width: 200px; /* Antes: 350px */
+    max-width: 260px;      /* Un poco más ancho para que entren input y botón */
     border: 2px solid #fff;
     border-radius: 8px;
     background: #000;
-    padding: 1px 4px; /* Más compacto */
-    align-items: center;
+    padding: 0;
+    overflow: hidden;
+    gap: 0;
 }
 
 #busqueda-locales {
-    flex: 1;
-    padding: 5px 8px; /* Más pequeño */
-    border-radius: 8px;
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 5px 8px;
     border: none;
+    border-radius: 0;
     font-size: 1em;
     background: #000;
     color: #fff;
     outline: none;
 }
 
+/* Botón de lupa pequeño y cuadrado, con borde blanco */
 #buscador-locales button {
     background: #000;
     border: none;
     color: #fff;
-    padding: 8px 12px;
-    border-radius: 6px;
+    padding: 0;
     cursor: pointer;
-    transition: all 0.3s;
-    font-family: inherit;
-    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    min-height: 38px;
+    border-radius: 0;
+    transition: background 0.3s;
 }
 
-#buscador-locales button:hover {
+#buscador-locales button svg {
+    display: block;
+    width: 18px;
+    height: 18px;
+}
+
+#buscador-locales button:hover,
+#buscador-locales button:focus {
     background: #fff;
     color: #000;
 }
