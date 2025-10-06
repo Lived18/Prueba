@@ -31,7 +31,7 @@
     </header>
 
     <h1>Hamburgueserías</h1>
-    <h3>Artesanales</h3>
+
 
     <!-- Contenedor donde se cargan los locales dinámicamente -->
     <section class="locales-lista" id="lista-locales"></section>
@@ -53,26 +53,56 @@
         const contenedor = document.getElementById("lista-locales");
         contenedor.innerHTML = "";
 
-        locales.forEach(local => {
-            contenedor.innerHTML += `
-                <div class="local">
-                    <div>
-                        <h2>${local.nombre}</h2>
-                        <p>${local.dirección} / ${local.numero}</p>
-                    </div>
-                    <div class="redes">
-                        <button onclick="window.open('${local.instagram}', '_blank')" title="Instagram" style="background:none; border:none; cursor:pointer; padding:0;">
-                            <img src="imagenes/insta logo.png" alt="Instagram" width="40" height="40">
-                        </button>
-                        <button onclick="window.open('${local.whatsapp}', '_blank')" title="WhatsApp" style="background:none; border:none; cursor:pointer; padding:0;">
-                            <img src="imagenes/LOGO whatgs.png" alt="WhatsApp" width="40" height="40">
-                        </button>
-                    </div>
-                </div>
-            `;
-        });
-    }
+        // Separar por tipo
+        const artesanales = locales.filter(local => local.tipo === "Artesanal");
+        const industriales = locales.filter(local => local.tipo === "Industrial");
 
+        // Mostrar Artesanales primero
+        if (artesanales.length > 0) {
+            contenedor.innerHTML += `<h2 style="color:#ffcc00; margin-top:60px;">Artesanales</h2>`;
+            artesanales.forEach(local => {
+                contenedor.innerHTML += `
+                    <div class="local">
+                        <div>
+                            <h2>${local.nombre}</h2>
+                            <p>${local.dirección} / ${local.numero}</p>
+                        </div>
+                        <div class="redes">
+                            <button onclick="window.open('${local.instagram}', '_blank')" title="Instagram" style="background:none; border:none; cursor:pointer; padding:0;">
+                                <img src="imagenes/insta logo.png" alt="Instagram" width="40" height="40">
+                            </button>
+                            <button onclick="window.open('${local.whatsapp}', '_blank')" title="WhatsApp" style="background:none; border:none; cursor:pointer; padding:0;">
+                                <img src="imagenes/LOGO whatgs.png" alt="WhatsApp" width="40" height="40">
+                            </button>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        // Mostrar Industriales después
+        if (industriales.length > 0) {
+            contenedor.innerHTML += `<h2 style="color:#ffcc00; margin-top:24px;">Industriales</h2>`;
+            industriales.forEach(local => {
+                contenedor.innerHTML += `
+                    <div class="local">
+                        <div>
+                            <h2>${local.nombre}</h2>
+                            <p>${local.dirección} / ${local.numero}</p>
+                        </div>
+                        <div class="redes">
+                            <button onclick="window.open('${local.instagram}', '_blank')" title="Instagram" style="background:none; border:none; cursor:pointer; padding:0;">
+                                <img src="imagenes/insta logo.png" alt="Instagram" width="40" height="40">
+                            </button>
+                            <button onclick="window.open('${local.whatsapp}', '_blank')" title="WhatsApp" style="background:none; border:none; cursor:pointer; padding:0;">
+                                <img src="imagenes/LOGO whatgs.png" alt="WhatsApp" width="40" height="40">
+                            </button>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+    }
 
     cargarLocales();
 
