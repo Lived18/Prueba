@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
     <title>Manaos Web</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="comida.css">
@@ -10,30 +11,18 @@
     <header>
         <div class="header-content">
             <div class="header-left">
-                <!-- Botón para redireccionar al index -->
-                <button onclick="window.location.href='index.html'">Inicio</button>
+                <button onclick="window.location.href='index.html'">DONDE LO ENCUENTRO</button>
             </div>
-            <div class="header-center">
-                <!-- Barra buscadora -->
-                <form id="buscador-locales" action="#" method="get">
-                    <input type="text" placeholder="Buscar..." name="busqueda" id="busqueda-locales" autocomplete="off">
-                    <button type="submit" aria-label="Buscar">
-                        <!-- Ícono de lupa SVG -->
-                        <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
-                            <circle cx="9" cy="9" r="7" stroke="white" stroke-width="2"/>
-                            <line x1="14.4142" y1="14" x2="19" y2="18.5858" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </button>
-                </form>
-            </div>
-
         </div>
     </header>
 
+    <div class="banner-hamburguesas">
+        <img src="imagenes/banner.PNG" "Hamburguesas">
+        
+    </div>
+
     <h1>Hamburgueserías</h1>
 
-
-    <!-- Contenedor donde se cargan los locales dinámicamente -->
     <section class="locales-lista" id="lista-locales"></section>
 
     <footer>
@@ -41,98 +30,157 @@
             <button onclick="window.open('https://facebook.com', '_blank')">Facebook</button>
             <button onclick="window.open('https://tiktok.com', '_blank')">TikTok</button>
             <button onclick="window.open('https://instagram.com', '_blank')">Instagram</button>
+            <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfexO9c-7ScsMS8Y_tuyt_Z8ZBVI0SfnJPIaavuNdWhEDUYVA/viewform?usp=header')">Reportar Problema</button>
         </div>
-        <p>Todos los derechos reservados</p>
+        <p>Todos los derechos reservados ©</p>
     </footer>
 
     <script>
-        //Funcion Cargar locales
-    async function cargarLocales() {
-        const respuesta = await fetch("locales.json");
-        const locales = await respuesta.json();
-        const contenedor = document.getElementById("lista-locales");
-        contenedor.innerHTML = "";
-
-        // Separar por tipo
-        const artesanales = locales.filter(local => local.tipo === "Artesanal");
-        const industriales = locales.filter(local => local.tipo === "Industrial");
-
-        // Mostrar Artesanales primero
-        if (artesanales.length > 0) {
-            contenedor.innerHTML += `<h2 style="color:#ffcc00; margin-top:60px;">Artesanales</h2>`;
-            artesanales.forEach(local => {
-                contenedor.innerHTML += `
-                    <div class="local">
-                        <div>
-                            <h2>${local.nombre}</h2>
-                            <p>${local.dirección} / ${local.numero}</p>
-                        </div>
-                        <div class="redes">
-                            <button onclick="window.open('${local.instagram}', '_blank')" title="Instagram" style="background:none; border:none; cursor:pointer; padding:0;">
-                                <img src="imagenes/insta logo.png" alt="Instagram" width="40" height="40">
-                            </button>
-                            <button onclick="window.open('${local.whatsapp}', '_blank')" title="WhatsApp" style="background:none; border:none; cursor:pointer; padding:0;">
-                                <img src="imagenes/LOGO whatgs.png" alt="WhatsApp" width="40" height="40">
-                            </button>
-                        </div>
-                    </div>
-                `;
-            });
-        }
-
-        // Mostrar Industriales después
-        if (industriales.length > 0) {
-            contenedor.innerHTML += `<h2 style="color:#ffcc00; margin-top:24px;">Industriales</h2>`;
-            industriales.forEach(local => {
-                contenedor.innerHTML += `
-                    <div class="local">
-                        <div>
-                            <h2>${local.nombre}</h2>
-                            <p>${local.dirección} / ${local.numero}</p>
-                        </div>
-                        <div class="redes">
-                            <button onclick="window.open('${local.instagram}', '_blank')" title="Instagram" style="background:none; border:none; cursor:pointer; padding:0;">
-                                <img src="imagenes/insta logo.png" alt="Instagram" width="40" height="40">
-                            </button>
-                            <button onclick="window.open('${local.whatsapp}', '_blank')" title="WhatsApp" style="background:none; border:none; cursor:pointer; padding:0;">
-                                <img src="imagenes/LOGO whatgs.png" alt="WhatsApp" width="40" height="40">
-                            </button>
-                        </div>
-                    </div>
-                `;
-            });
-        }
-    }
-
-    cargarLocales();
-
-
-        //Buscador de locales
-
-     document.getElementById('buscador-locales').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const filtro = document.getElementById('busqueda-locales').value.toLowerCase();
-        const locales = document.querySelectorAll('.locales-lista .local');
-        locales.forEach(local => {
-            const nombre = local.querySelector('h2').textContent.toLowerCase();
-            const info = local.querySelector('p').textContent.toLowerCase();
-            if (nombre.includes(filtro) || info.includes(filtro)) {
-                local.style.display = '';
-            } else {
-                local.style.display = 'none';
+        async function cargarLocales() {
+            try {
+                const respuesta = await fetch("locales.json");
+                const locales = await respuesta.json();
+                renderizarLocales(locales);
+            } catch (error) {
+                console.error("Error cargando locales.json:", error);
+                // Datos de demostración si el JSON no carga
+                const localesDemo = [
+                    {
+                        nombre: "APOLO BURGER",
+                        dirección: "Los ceibos",
+                        numero: "135 / Zona Norte",
+                        tipo: "Artesanal",
+                        instagram: "https://instagram.com",
+                        whatsapp: "https://wa.me/",
+                        extra: "Delivery - Take Away"
+                    },
+                    {
+                        nombre: "BIG YOLA",
+                        dirección: "Paraguay",
+                        numero: "87 / SMT",
+                        tipo: "Artesanal",
+                        instagram: "https://instagram.com",
+                        whatsapp: "https://wa.me/",
+                        extra: "Local disponible"
+                    },
+                    {
+                        nombre: "BILLY BOB BURGER",
+                        dirección: "Marcos Paz",
+                        numero: "478 / Zona Sur",
+                        tipo: "Artesanal",
+                        instagram: "https://instagram.com",
+                        whatsapp: "https://wa.me/",
+                        extra: "Local disponible"
+                    },
+                    {
+                        nombre: "MAINZ BURGER",
+                        dirección: "Av. Aconquija",
+                        numero: "475 / YB",
+                        tipo: "Artesanal",
+                        instagram: "https://instagram.com",
+                        whatsapp: "https://wa.me/",
+                        extra: "Delivery - Take Away"
+                    }
+                ];
+                renderizarLocales(localesDemo);
             }
-        });
-    });
+        }
 
+        function renderizarLocales(locales) {
+            const contenedor = document.getElementById("lista-locales");
+            contenedor.innerHTML = "";
 
-    //mostrar todos los locales si el campo de búsqueda está vacío
-    document.getElementById('busqueda-locales').addEventListener('input', function() {
-        if (this.value === '') {
-            document.querySelectorAll('.locales-lista .local').forEach(local => {
-                local.style.display = '';
+            const artesanales = locales.filter(local => local.tipo === "Artesanal");
+            const industriales = locales.filter(local => local.tipo === "Industrial");
+
+            if (artesanales.length > 0) {
+                contenedor.innerHTML += crearSeccionCategoria("ARTESANALES", artesanales);
+            }
+
+            if (industriales.length > 0) {
+                contenedor.innerHTML += crearSeccionCategoria("INDUSTRIALES", industriales);
+            }
+
+            // Reinicializar el buscador después de cargar
+            setTimeout(inicializarBuscador, 0);
+        }
+
+        function crearSeccionCategoria(titulo, locales) {
+            let html = `
+                <div class="seccion-categoria">
+                    <div class="categoria-header">
+                        <h2>${titulo}</h2>
+                        ${titulo === "ARTESANALES" ? `
+                        <form id="buscador-locales" action="#" method="get">
+                            <input type="text" placeholder="Buscar..." name="busqueda" id="busqueda-locales" autocomplete="off">
+                            <button type="submit" aria-label="Buscar" style="font-size: 1.5em; border: none;">
+                                🔍
+                            </button>
+                        </form>
+                        ` : ''}
+                    </div>
+                    <div class="locales-grid">
+            `;
+
+            locales.forEach(local => {
+                html += `
+                    <div class="local">
+                        <div>
+                            <h2>${local.nombre}</h2>
+                            <p>${local.dirección} ${local.zona}</p>
+                            <p>${local.extra}</p>
+                        </div>
+                        <div class="redes">
+                            <button onclick="window.open('${local.instagram}', '_blank')" title="Instagram">
+                                <img src="imagenes/logo ig negro.jpg"
+                            </button>
+                            <button onclick="window.open('${local.whatsapp}', '_blank')" title="WhatsApp">
+                                <img src="imagenes/logo whtas negro.jpg"
+                            </button>
+                        </div>
+                    </div>
+                `;
+            });
+
+            html += `
+                    </div>
+                </div>
+            `;
+
+            return html;
+        }
+
+        function inicializarBuscador() {
+            const buscador = document.getElementById('buscador-locales');
+            const busquedaInput = document.getElementById('busqueda-locales');
+            
+            if (!buscador) return;
+
+            buscador.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const filtro = busquedaInput.value.toLowerCase();
+                const locales = document.querySelectorAll('.locales-lista .local');
+                locales.forEach(local => {
+                    const nombre = local.querySelector('h2').textContent.toLowerCase();
+                    const info = local.querySelector('p').textContent.toLowerCase();
+                    if (nombre.includes(filtro) || info.includes(filtro)) {
+                        local.style.display = '';
+                    } else {
+                        local.style.display = 'none';
+                    }
+                });
+            });
+
+            busquedaInput.addEventListener('input', function() {
+                if (this.value === '') {
+                    document.querySelectorAll('.locales-lista .local').forEach(local => {
+                        local.style.display = '';
+                    });
+                }
             });
         }
-    });
+
+        cargarLocales();
     </script>
 </body>
 </html>
