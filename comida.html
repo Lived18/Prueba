@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="format-detection" content="telephone=no">
-    <title>Manaos Web</title>
+    <title>DONDE LO ENCUENTRO</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="comida.css">
 </head>
@@ -17,7 +17,7 @@
     </header>
 
     <div class="banner-hamburguesas">
-        <img src="imagenes/banner.PNG" "Hamburguesas">
+        <img src="imagenes/banner hamb.PNG"Hamburguesas">
         
     </div>
 
@@ -27,10 +27,8 @@
 
     <footer>
         <div class="social">
-            <button onclick="window.open('https://facebook.com', '_blank')">Facebook</button>
-            <button onclick="window.open('https://tiktok.com', '_blank')">TikTok</button>
-            <button onclick="window.open('https://instagram.com', '_blank')">Instagram</button>
             <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfexO9c-7ScsMS8Y_tuyt_Z8ZBVI0SfnJPIaavuNdWhEDUYVA/viewform?usp=header')">Reportar Problema</button>
+            <button onclick="window.location.href='contacto.html'">Sobre Nosotros</button>
         </div>
         <p>Todos los derechos reservados ©</p>
     </footer>
@@ -150,6 +148,25 @@
             return html;
         }
 
+        function inicializarBotonesRedes() {
+            const esIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+
+            document.querySelectorAll('.btn-instagram, .btn-whatsapp').forEach(boton => {
+                boton.addEventListener('click', e => {
+                    const url = e.currentTarget.dataset.url;
+
+                    if (esIOS) {
+                        // En iOS, abrir en la misma pestaña
+                        window.location.href = url;
+                    } else {
+                        // En Android o PC, nueva pestaña
+                        window.open(url, '_blank', 'noopener,noreferrer');
+                    }
+                });
+            });
+        }
+
+
         function inicializarBuscador() {
             const buscador = document.getElementById('buscador-locales');
             const busquedaInput = document.getElementById('busqueda-locales');
@@ -163,7 +180,7 @@
                 locales.forEach(local => {
                     const nombre = local.querySelector('h2').textContent.toLowerCase();
                     const info = local.querySelector('p').textContent.toLowerCase();
-                    if (nombre.includes(filtro) || info.includes(filtro)) {
+                    if (nombre.includes(filtro)) {
                         local.style.display = '';
                     } else {
                         local.style.display = 'none';
