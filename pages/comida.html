@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <title>DONDE LO ENCUENTRO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/comida.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-left">
+                <button onclick="window.location.href='../index.html'">DONDE LO ENCUENTRO</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="banner-hamburguesas">
+        <img src="../imagenes/banner hamb.PNG" alt="Hamburguesas">
+    </div>
+
+    <h1>Hamburgueserías</h1>
+
+    <section class="locales-lista" id="lista-locales"></section>
+
+    <footer>
+        <div class="social">
+            <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfexO9c-7ScsMS8Y_tuyt_Z8ZBVI0SfnJPIaavuNdWhEDUYVA/viewform?usp=header')">Reportar Problema</button>
+            <button onclick="window.location.href='contacto.html'">Sobre Nosotros</button>
+            <button onclick="window.location.href='https://Instagram.com'">Instagram</button>
+            <button onclick="window.location.href='https://Facebook.com'">Facebook</button>
+            <button onclick="window.location.href='https://TikTok.com'">TikTok</button>
+        </div>
+        <p>Todos los derechos reservados ©</p>
+    </footer>
+
+    <script>
+        async function cargarLocales() {
+            try {
+                const respuesta = await fetch("../data/locales.json");
+                const locales = await respuesta.json();
+                renderizarLocales(locales);
+            } catch (error) {
+                console.error("Error cargando locales.json:", error);
+            }
+        }
+
+        function renderizarLocales(locales) {
+            const contenedor = document.getElementById("lista-locales");
+            contenedor.innerHTML = "";
+
+            const artesanales = locales.filter(local => local.tipo === "Artesanal");
+            const industriales = locales.filter(local => local.tipo === "Industrial");
+
+            if (artesanales.length > 0) {
+                contenedor.innerHTML += crearSeccionCategoria("ARTESANALES", artesanales);
+            }
+
+            if (industriales.length > 0) {
+                contenedor.innerHTML += crearSeccionCategoria("INDUSTRIALES", industriales);
+            }
+
+            setTimeout(inicializarBuscador, 0);
+        }
+
+        function crearSeccionCategoria(titulo, locales) {
+            let html = `
+                <div class="seccion-categoria">
+                    <div class="categoria-header">
+                        <h2>${titulo}</h2>
+                        ${titulo === "ARTESANALES" ? `
+                        <form id="buscador-locales" action="#" method="get">
+                            <input type="text" placeholder="Buscar..." name="busqueda" id="busqueda-locales" autocomplete="off">
+                            <button type="submit" aria-label="Buscar" style="font-size: 1.5em; border: none;">
+                                🔍
+                            </button>
+                        </form>
+                        ` : ''}
+                    </div>
+                    <div class="locales-grid">
+            `;
+
+            locales.forEach(local => {
+                html += `
+                    <div class="local">
+                        <div>
+                            <h2>${local.nombre}</h2>
+                            <p>${local.dirección}</p>
+                        </div>
+                        <div class="redes">
+                            <button onclick="window.open('${local.instagram}', '_blank')" title="Instagram">
+                                <img src="../imagenes/logo ig negro.jpg" alt="Instagram">
+                            </button>
+                            <button onclick="window.open('${local.whatsapp}', '_blank')" title="WhatsApp">
+                                <img src="../imagenes/logo whtas negro.jpg" alt="WhatsApp">
+                            </button>
+                        </div>
+                    </div>
+                `;
+            });
+
+            html += `
+                    </div>
+                </div>
+            `;
+
+            return html;
+        }
+
+        function inicializarBuscador() {
+            const buscador = document.getElementById('buscador-locales');
+            const busquedaInput = document.getElementById('busqueda-locales');
+            
+            if (!buscador) return;
+
+            buscador.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const filtro = busquedaInput.value.toLowerCase();
+                const locales = document.querySelectorAll('.locales-lista .local');
+                locales.forEach(local => {
+                    const nombre = local.querySelector('h2').textContent.toLowerCase();
+                    if (nombre.includes(filtro)) {
+                        local.style.display = '';
+                    } else {
+                        local.style.display = 'none';
+                    }
+                });
+            });
+
+            busquedaInput.addEventListener('input', function() {
+                if (this.value === '') {
+                    document.querySelectorAll('.locales-lista .local').forEach(local => {
+                        local.style.display = '';
+                    });
+                }
+            });
+        }
+
+        cargarLocales();
+    </script>
+</body>
+</html>
