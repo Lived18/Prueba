@@ -48,7 +48,7 @@ h3 {
     flex-wrap: wrap;
     width: 100%;
     margin: 32px 0;
-    text-align: center; /* Centra el texto del párrafo */
+    text-align: center;
 }
 
 /* HEADER */
@@ -91,7 +91,7 @@ header {
     cursor: pointer;
     letter-spacing: 2px;
     margin: 0;
-    padding: 0 0 0 16px; /* Más pegado al borde izquierdo */
+    padding: 0 0 0 16px;
     text-align: left;
     display: block;
 }
@@ -99,12 +99,13 @@ header {
 .header-center {
     display: none;
 }
+
 /* FOOTER */
 footer {
     background-color: #000;
     color: #fff;
     text-align: center;
-    padding: 40px 20px;
+    padding: 24px 20px;
     border-top: 2px solid #fff;
     display: flex;
     flex-direction: column;
@@ -112,6 +113,11 @@ footer {
     gap: 16px;
     margin-top: auto;
     width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    z-index: 100;
 }
 
 footer .social {
@@ -129,10 +135,10 @@ footer button {
     background: #222;
     color: #fff;
     border: 2px solid #fff;
-    padding: 10px 18px;
+    padding: 8px 12px;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 1.1em;
+    font-size: 0.95em;
     transition: all 0.3s;
 }
 
@@ -142,7 +148,7 @@ footer button:hover {
 }
 
 footer p {
-    font-size: 0.9em;
+    font-size: 0.85em;
     color: #aaa;
 }
 
@@ -181,21 +187,11 @@ footer p {
         justify-content: center;
     }
         footer {
-        padding: 24px 12px;
+        padding: 20px 12px;
     }
 
     footer button {
-        font-size: 0.95em;
-        padding: 8px 14px;
+        font-size: 0.9em;
+        padding: 6px 10px;
     }
-/* Responsive: NO apilar, solo reducir ancho */
-@media (max-width: 900px) {
-    .categoria-header {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        gap: 10px;
-        width: 100%;
-    }
-}
 }
