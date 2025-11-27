@@ -49,9 +49,41 @@ header {
     width: 100%;
 }
 
-header form button:hover {
-    background-color: #fff;
-    color: #000;
+.header-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 24px 0 12px 0;
+    box-sizing: border-box;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1 1 auto;
+    width: auto;
+}
+
+.header-left button {
+    font-size: 2em;
+    font-weight: 300;
+    background: none;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 0 0 0 16px;
+    text-align: left;
+    display: block;
+}
+
+.header-center {
+    display: none;
 }
 
 /* TITULO */
@@ -189,6 +221,16 @@ footer p {
     }
 
     .header-content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .header-left button {
+        font-size: 1.3em;
+        padding-left: 8px;
+        width: auto;
+    }
+
+    .header-content {
         flex-direction: column;
         padding: 12px 12px;
         gap: 10px;
@@ -210,7 +252,8 @@ footer p {
         width: 100%;
         justify-content: center;
     }
-        footer {
+
+    footer {
         padding: 20px 12px;
     }
 
