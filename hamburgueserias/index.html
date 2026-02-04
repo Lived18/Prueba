@@ -14,20 +14,32 @@
     <meta name="format-detection" content="telephone=no">
     <title>DONDE LO ENCUENTRO</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/comida.css">
+    <link rel="stylesheet" href="../../css/hamburgueserias.css">
 </head>
 <body>
 
     <header>
         <div class="header-content">
             <div class="header-left">
-                <button onclick="window.location.href='../index.html'">DONDE LO ENCUENTRO</button>
+                <button onclick="window.location.href='/inicio.html'">DONDE LO ENCUENTRO</button>
             </div>
         </div>
     </header>
 
     <div class="banner-hamburguesas">
-        <img src="../imagenes/banner hamb.PNG" alt="Hamburguesas">
+        <img src="../../imagenes/banner hamb.PNG" alt="Hamburguesas">
+    </div>
+
+    <!-- CARRUSEL DE IMÁGENES -->
+    <div class="carrusel-container">
+        <div class="carrusel-wrapper">
+            <img class="carrusel-imagen" src="../../imagenes/imagen bur 1.jpg" alt="Hamburguesa 1">
+            <img class="carrusel-imagen" src="../../imagenes/imagen bur 2.jpg" alt="Hamburguesa 2">
+            <img class="carrusel-imagen" src="../../imagenes/imagen bur 3.jpg" alt="Hamburguesa 3">
+            <img class="carrusel-imagen" src="../../imagenes/imagen bur 4.jpeg" alt="Hamburguesa 4">
+        </div>
+        <button class="carrusel-btn carrusel-prev" onclick="moverCarrusel(-1)">❮</button>
+        <button class="carrusel-btn carrusel-next" onclick="moverCarrusel(1)">❯</button>
     </div>
 
     <h1>Hamburgueserías</h1>
@@ -37,7 +49,8 @@
     <footer>
         <div class="social">
             <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfexO9c-7ScsMS8Y_tuyt_Z8ZBVI0SfnJPIaavuNdWhEDUYVA/viewform?usp=header')">Reportar Problema</button>
-            <button onclick="window.location.href='contacto.html'">Sobre Nosotros</button>
+            <button onclick="window.location.href='../contacto'">Contacto</button>
+            <button onclick="window.location.href='../sobrenosotros'">Sobre Nosotros</button>
             <button onclick="window.location.href='https://Instagram.com'">Instagram</button>
             <button onclick="window.location.href='https://Facebook.com'">Facebook</button>
             <button onclick="window.location.href='https://TikTok.com'">TikTok</button>
@@ -100,10 +113,10 @@
                         </div>
                         <div class="redes">
                             <button onclick="window.location.href='${local.instagram}'" title="Instagram">
-                                <img src="../imagenes/logo ig negro.jpg" alt="Instagram">
+                                <img src="../imagenes/IG Icono.png" alt="Instagram">
                             </button>
                             <button onclick="window.open('${local.whatsapp}', '_blank')" title="WhatsApp">
-                                <img src="../imagenes/logo whtas negro.jpg" alt="WhatsApp">
+                                <img src="../imagenes/WP Icono.png" alt="WhatsApp">
                             </button>
                         </div>
                     </div>
@@ -148,6 +161,43 @@
         }
 
         cargarLocales();
+
+        // CARRUSEL AUTOMÁTICO
+        let indiceCarrusel = 0;
+        const imagenes = document.querySelectorAll('.carrusel-imagen');
+        const totalImagenes = imagenes.length;
+        let intervaloCarrusel; // Guardar referencia del intervalo
+
+        function actualizarCarrusel() {
+            const wrapper = document.querySelector('.carrusel-wrapper');
+            wrapper.style.transform = `translateX(-${indiceCarrusel * 100}%)`;
+        }
+
+        function reiniciarIntervalo() {
+            // Limpiar el intervalo anterior
+            clearInterval(intervaloCarrusel);
+            
+            // Crear nuevo intervalo
+            intervaloCarrusel = setInterval(() => {
+                moverCarrusel(1);
+            }, 5000);
+        }
+
+        function moverCarrusel(direccion) {
+            indiceCarrusel += direccion;
+            if (indiceCarrusel < 0) {
+                indiceCarrusel = totalImagenes - 1;
+            } else if (indiceCarrusel >= totalImagenes) {
+                indiceCarrusel = 0;
+            }
+            actualizarCarrusel();
+            
+            // Reiniciar el contador cada vez que se hace clic
+            reiniciarIntervalo();
+        }
+
+        // Iniciar el carrusel automático
+        reiniciarIntervalo();
     </script>
 </body>
 </html>
