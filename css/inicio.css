@@ -7,7 +7,21 @@
     box-sizing: border-box;
 }
 
-body,
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-image: url('../imagenes/Fondo Web Escritorio.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Geologica', Arial, sans-serif;
+    font-weight: 300;
+    background-color: #000;
+    color: #fff;
+}
+
 button,
 input,
 select,
@@ -115,6 +129,34 @@ nav ul li a {
 }
 
 nav ul li a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* SOCIAL CENTER */
+.social-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 40px 16px;
+}
+
+.social-center button {
+    font-family: 'Geologica', Arial, sans-serif;
+    font-weight: 300;
+    background: #222;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: all 0.3s;
+}
+
+.social-center button:hover {
     background-color: #fff;
     color: #000;
 }
