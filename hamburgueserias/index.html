@@ -166,21 +166,33 @@
         let indiceCarrusel = 0;
         const imagenes = document.querySelectorAll('.carrusel-imagen');
         const totalImagenes = imagenes.length;
-        let intervaloCarrusel; // Guardar referencia del intervalo
+        let intervaloCarrusel;
+        let tiempoReinicioIntervalo;
 
         function actualizarCarrusel() {
             const wrapper = document.querySelector('.carrusel-wrapper');
             wrapper.style.transform = `translateX(-${indiceCarrusel * 100}%)`;
         }
 
-        function reiniciarIntervalo() {
-            // Limpiar el intervalo anterior
+        function iniciarIntervaloAutomatico() {
             clearInterval(intervaloCarrusel);
-            
-            // Crear nuevo intervalo
             intervaloCarrusel = setInterval(() => {
-                moverCarrusel(1);
+                indiceCarrusel += 1;
+                if (indiceCarrusel >= totalImagenes) {
+                    indiceCarrusel = 0;
+                }
+                actualizarCarrusel();
             }, 5000);
+        }
+
+        function pausarYReiniciarIntervalo() {
+            clearInterval(intervaloCarrusel);
+            clearTimeout(tiempoReinicioIntervalo);
+            
+            // Reiniciar el intervalo automático después de 3 segundos de inactividad
+            tiempoReinicioIntervalo = setTimeout(() => {
+                iniciarIntervaloAutomatico();
+            }, 3000);
         }
 
         function moverCarrusel(direccion) {
@@ -191,13 +203,11 @@
                 indiceCarrusel = 0;
             }
             actualizarCarrusel();
-            
-            // Reiniciar el contador cada vez que se hace clic
-            reiniciarIntervalo();
+            pausarYReiniciarIntervalo();
         }
 
         // Iniciar el carrusel automático
-        reiniciarIntervalo();
+        iniciarIntervaloAutomatico();
 
         // SOPORTE PARA DESLIZAMIENTO TÁCTIL (SWIPE)
         let startX = 0;
@@ -206,6 +216,7 @@
 
         carruselContainer.addEventListener('touchstart', function(e) {
             startX = e.touches[0].clientX;
+            pausarYReiniciarIntervalo();
         }, false);
 
         carruselContainer.addEventListener('touchmove', function(e) {
@@ -214,14 +225,12 @@
 
         carruselContainer.addEventListener('touchend', function(e) {
             const diferencia = startX - currentX;
-            const umbral = 50; // Mínima distancia para considerar un swipe
+            const umbral = 50;
 
             if (Math.abs(diferencia) > umbral) {
                 if (diferencia > 0) {
-                    // Deslizó hacia la izquierda → siguiente imagen
                     moverCarrusel(1);
                 } else {
-                    // Deslizó hacia la derecha → imagen anterior
                     moverCarrusel(-1);
                 }
             }
