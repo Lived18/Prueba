@@ -166,33 +166,21 @@
         let indiceCarrusel = 0;
         const imagenes = document.querySelectorAll('.carrusel-imagen');
         const totalImagenes = imagenes.length;
-        let intervaloCarrusel;
-        let tiempoReinicioIntervalo;
+        let intervaloCarrusel; // Guardar referencia del intervalo
 
         function actualizarCarrusel() {
             const wrapper = document.querySelector('.carrusel-wrapper');
             wrapper.style.transform = `translateX(-${indiceCarrusel * 100}%)`;
         }
 
-        function iniciarIntervaloAutomatico() {
+        function reiniciarIntervalo() {
+            // Limpiar el intervalo anterior
             clearInterval(intervaloCarrusel);
-            intervaloCarrusel = setInterval(() => {
-                indiceCarrusel += 1;
-                if (indiceCarrusel >= totalImagenes) {
-                    indiceCarrusel = 0;
-                }
-                actualizarCarrusel();
-            }, 5000);
-        }
-
-        function pausarYReiniciarIntervalo() {
-            clearInterval(intervaloCarrusel);
-            clearTimeout(tiempoReinicioIntervalo);
             
-            // Reiniciar el intervalo automático después de 3 segundos de inactividad
-            tiempoReinicioIntervalo = setTimeout(() => {
-                iniciarIntervaloAutomatico();
-            }, 3000);
+            // Crear nuevo intervalo
+            intervaloCarrusel = setInterval(() => {
+                moverCarrusel(1);
+            }, 5000);
         }
 
         function moverCarrusel(direccion) {
@@ -203,38 +191,13 @@
                 indiceCarrusel = 0;
             }
             actualizarCarrusel();
-            pausarYReiniciarIntervalo();
+            
+            // Reiniciar el contador cada vez que se hace clic
+            reiniciarIntervalo();
         }
 
         // Iniciar el carrusel automático
-        iniciarIntervaloAutomatico();
-
-        // SOPORTE PARA DESLIZAMIENTO TÁCTIL (SWIPE)
-        let startX = 0;
-        let currentX = 0;
-        const carruselContainer = document.querySelector('.carrusel-container');
-
-        carruselContainer.addEventListener('touchstart', function(e) {
-            startX = e.touches[0].clientX;
-            pausarYReiniciarIntervalo();
-        }, false);
-
-        carruselContainer.addEventListener('touchmove', function(e) {
-            currentX = e.touches[0].clientX;
-        }, false);
-
-        carruselContainer.addEventListener('touchend', function(e) {
-            const diferencia = startX - currentX;
-            const umbral = 50;
-
-            if (Math.abs(diferencia) > umbral) {
-                if (diferencia > 0) {
-                    moverCarrusel(1);
-                } else {
-                    moverCarrusel(-1);
-                }
-            }
-        }, false);
+        reiniciarIntervalo();
     </script>
 </body>
 </html>
