@@ -198,6 +198,34 @@
 
         // Iniciar el carrusel automático
         reiniciarIntervalo();
+
+        // SOPORTE PARA DESLIZAMIENTO TÁCTIL (SWIPE)
+        let startX = 0;
+        let currentX = 0;
+        const carruselContainer = document.querySelector('.carrusel-container');
+
+        carruselContainer.addEventListener('touchstart', function(e) {
+            startX = e.touches[0].clientX;
+        }, false);
+
+        carruselContainer.addEventListener('touchmove', function(e) {
+            currentX = e.touches[0].clientX;
+        }, false);
+
+        carruselContainer.addEventListener('touchend', function(e) {
+            const diferencia = startX - currentX;
+            const umbral = 50; // Mínima distancia para considerar un swipe
+
+            if (Math.abs(diferencia) > umbral) {
+                if (diferencia > 0) {
+                    // Deslizó hacia la izquierda → siguiente imagen
+                    moverCarrusel(1);
+                } else {
+                    // Deslizó hacia la derecha → imagen anterior
+                    moverCarrusel(-1);
+                }
+            }
+        }, false);
     </script>
 </body>
 </html>
