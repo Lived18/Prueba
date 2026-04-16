@@ -11,14 +11,9 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-attachment: fixed;
-    background-image: url('../imagenes/Fondo Web Escritorio.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    font-family: 'Geologica', Arial, sans-serif;
+    background: radial-gradient(circle at 50% 50%, #414141 0%, #2e2e2e 25%, #171717 50%, #0c0c0c 75%, #0c0c0c 100%);
+    font-family: 'calsans-regular', Arial, sans-serif;
     font-weight: 300;
-    background-color: #000;
     color: #fff;
 }
 
@@ -26,7 +21,7 @@ button,
 input,
 select,
 textarea {
-    font-family: 'Geologica', Arial, sans-serif;
+    font-family: 'calsans-regular', Arial, sans-serif;
     font-weight: 300;
     background-color: #000;
     color: #fff;
@@ -41,7 +36,7 @@ nav ul li a.img-button {
 
 nav ul li a.img-button img {
     width: 200px;       /* ajustá el tamaño según necesites */
-    border: 2px solid #fff;
+    border: 0.5px solid #fff;
     border-radius: 12px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -58,9 +53,10 @@ header {
     padding: 0;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     border-bottom: 2px solid #fff;
     width: 100%;
+    height: 80px;
 }
 
 .header-content {
@@ -70,8 +66,9 @@ header {
     width: 100%;
     max-width: none;
     margin: 0;
-    padding: 24px 0 12px 0;
+    padding: 0 10px;
     box-sizing: border-box;
+    height: 100%;
 }
 
 .header-left {
@@ -80,6 +77,7 @@ header {
     justify-content: flex-start;
     flex: 1 1 auto;
     width: auto;
+    height: 100%;
 }
 
 .header-left button {
@@ -91,9 +89,17 @@ header {
     cursor: pointer;
     letter-spacing: 2px;
     margin: 0;
-    padding: 0 0 0 16px;
+    padding: 0;
     text-align: left;
-    display: block;
+    display: flex;
+    align-items: center;
+    height: auto;
+}
+
+.header-left button img {
+    height: 250px;
+    width: auto;
+    object-fit: contain;
 }
 
 .header-center {
@@ -144,71 +150,39 @@ nav ul li a:hover {
 }
 
 .social-center button {
-    font-family: 'Geologica', Arial, sans-serif;
+    font-family: 'calsans-regular', Arial, sans-serif;
     font-weight: 300;
-    background: #222;
+    background: none;
     color: #fff;
-    border: 2px solid #fff;
-    padding: 8px 12px;
+    border: none;
+    padding: 0;
     border-radius: 8px;
     cursor: pointer;
     font-size: 0.95em;
     transition: all 0.3s;
 }
 
-.social-center button:hover {
-    background-color: #fff;
-    color: #000;
-}
-
-
-.header-content {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    max-width: none;
-    margin: 0;
-    padding: 24px 0 12px 0;
-    box-sizing: border-box;
-}
-
-.header-left {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex: 1 1 auto;
+.social-center button img {
+    height: 40px;
     width: auto;
+    transition: transform 0.3s;
 }
 
-.header-left button {
-    font-size: 2em;
-    font-weight: 300;
-    background: none;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    letter-spacing: 2px;
-    margin: 0;
-    padding: 0 0 0 16px; /* Más pegado al borde izquierdo */
-    text-align: left;
-    display: block;
+.social-center button:hover img {
+    transform: scale(1.1);
 }
 
-.header-center {
-    display: none;
-}
 /* FOOTER */
 footer {
     background-color: #000;
     color: #fff;
     text-align: center;
-    padding: 12px 16px;
+    padding: 24px 20px;
     border-top: 2px solid #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 6px;
+    gap: 12px;
     margin-top: auto;
     width: 100%;
     position: relative;
@@ -226,12 +200,12 @@ footer .social {
 }
 
 footer button {
-    font-family: 'Geologica', Arial, sans-serif;
+    font-family: 'calsans-regular', Arial, sans-serif;
     font-weight: 300;
-    background: #222;
+    background: transparent;
     color: #fff;
     border: 2px solid #fff;
-    padding: 8px 12px;
+    padding: 10px 16px;
     border-radius: 8px;
     cursor: pointer;
     font-size: 0.95em;
@@ -244,7 +218,7 @@ footer button:hover {
 }
 
 footer p {
-    font-size: 0.85em;
+    font-size: 0.9em;
     color: #aaa;
 }
 
@@ -272,7 +246,7 @@ footer p {
 
     .header-content {
         flex-direction: column;
-        padding: 12px 12px;
+        padding: 3px;
         gap: 10px;
         align-items: stretch;
     }

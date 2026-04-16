@@ -11,7 +11,7 @@ button,
 input,
 select,
 textarea {
-    font-family: 'Geologica', Arial, sans-serif;
+    font-family: 'calsans-regular', Arial, sans-serif;
     font-weight: 300;
     background-color: #000;
     color: #fff;
@@ -34,9 +34,10 @@ header {
     padding: 0;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     border-bottom: 2px solid #fff;
     width: 100%;
+    height: 80px;
 }
 
 .header-content {
@@ -46,9 +47,11 @@ header {
     width: 100%;
     max-width: none;
     margin: 0;
-    padding: 24px 0 12px 0;
+    padding: 0 10px;
     box-sizing: border-box;
+    height: 100%;
 }
+
 
 .header-left {
     display: flex;
@@ -56,6 +59,7 @@ header {
     justify-content: flex-start;
     flex: 1 1 auto;
     width: auto;
+    height: 100%;
 }
 
 .header-left button {
@@ -67,9 +71,18 @@ header {
     cursor: pointer;
     letter-spacing: 2px;
     margin: 0;
-    padding: 0 0 0 16px; /* Más pegado al borde izquierdo */
+    padding: 0;
     text-align: left;
-    display: block;
+    display: flex;
+    align-items: center;
+    height: auto;
+}
+
+.header-left button img {
+    height: 250px;
+    width: auto;
+    object-fit: contain;
+
 }
 
 .header-center {
@@ -304,7 +317,7 @@ footer .social {
 }
 
 footer button {
-    font-family: 'Geologica', Arial, sans-serif;
+    font-family: 'calsans-regular', Arial, sans-serif;
     font-weight: 300;
     background: #222;
     color: #fff;
@@ -340,7 +353,7 @@ footer p {
 
     .header-content {
         flex-direction: column;
-        padding: 12px 12px;
+        padding: 3px;
         gap: 10px;
         align-items: stretch;
     }
