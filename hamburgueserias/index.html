@@ -91,19 +91,18 @@
         }
         // CREAR SECCIÓN DE CATEGORÍA (ARTESANALES O INDUSTRIALES)
         function crearSeccionCategoria(titulo, locales) {
-            let html = `
-                <div class="seccion-categoria">
-                    <div class="categoria-header">
-                        <h2>${titulo}</h2>
-                        ${titulo === "ARTESANALES" ? `
-                        <form id="buscador-locales" action="#" method="get">
-                            <input type="text" placeholder="Buscar..." name="busqueda" id="busqueda-locales" autocomplete="off">
-                            <button type="submit" aria-label="Buscar" style="font-size: 1.5em; border: none;">
-                                🔍
-                            </button>
-                        </form>
-                        ` : ''}
-                    </div>
+        let html = `
+            <div class="seccion-categoria">
+                ${titulo === "ARTESANALES" ? `
+            <button class="btn-promos" onclick="window.location.href='../promos'">VER PROMOS</button>
+            <form id="buscador-locales" action="#" method="get">
+            <input type="text" placeholder="Buscar..." name="busqueda" id="busqueda-locales" autocomplete="off">
+            <button type="submit" aria-label="Buscar" style="font-size: 1.5em; border: none;">🔍</button>
+            </form>
+                ` : ''}
+                <div class="categoria-header">
+            <h2>${titulo}</h2>
+        </div>  
                     <div class="locales-grid">
             `;
         // Agregar cada local a la sección correspondiente

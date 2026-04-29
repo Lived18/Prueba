@@ -11,7 +11,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background: radial-gradient(circle at 50% 50%, #414141 0%, #2e2e2e 25%, #171717 50%, #0c0c0c 75%, #0c0c0c 100%);
-  font-family: 'Geologica', Arial, sans-serif;
+  font-family: 'calsans-regular', Arial, sans-serif;
   font-weight: 300;
   color: #fff;
 }
@@ -49,7 +49,7 @@ header {
 }
 
 .header-left a img {
-  height: 250px;
+  height: 200px;
   width: auto;
   object-fit: contain;
   padding: 4px 0;
@@ -87,8 +87,8 @@ nav ul li a {
 }
 
 nav ul li a.img-button img {
-  width: 340px;
-  height: 340px;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
   border: 1px solid #555;
   border-radius: 20px;
@@ -148,7 +148,7 @@ footer .social {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   flex-wrap: wrap;
   width: 100%;
 }
@@ -160,7 +160,7 @@ footer .social a {
   padding: 8px 14px;
   border-radius: 8px;
   font-size: 0.9em;
-  font-family: 'Geologica', Arial, sans-serif;
+  font-family: 'calsans-regular', Arial, sans-serif;
   font-weight: 300;
   transition: all 0.3s;
 }
@@ -180,29 +180,33 @@ footer p {
   .header-left a img {
     height: 270px;
     width: auto;
+    margin-left: 5px;
   }
 
   nav ul {
-    margin: 40px 0 0 0;
+    margin: 230px 0 0 0;
   }
 
   nav ul li a.img-button img {
     width: 65vw;
     height: 65vw;
-    max-width: 340px;
-    max-height: 340px;
+    max-width: 200px;
+    max-height: 200px;
+    margin-top: -50px;
   }
 
   h1 {
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
 
   .social-center a img {
     height: 48px;
+    margin-top: 50px;
   }
 
   footer .social a {
     font-size: 0.82em;
-    padding: 6px 10px;
+    padding: 8px 10px;
+    
   }
 }
