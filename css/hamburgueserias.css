@@ -391,26 +391,8 @@ footer p {
 }
 
 @media (max-width: 768px) {
-  .header-left a img {
-    height: 300px;
-    width: auto;
-    padding: 1px;
-  }
-
-    .header-left {
-        width: 150%;
-        justify-content: center;
-    }
-
-    .header-left button {
-        width: 170%;
-        font-size: 1.2em;
-        padding: 10px;
-    }
-
-    .header-center {
-        width: 100%;
-        justify-content: center;
+    .header-left button img {
+        height: 250px;
     }
 
     #buscador-locales {

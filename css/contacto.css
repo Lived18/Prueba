@@ -165,42 +165,14 @@ footer p {
 
 /* RESPONSIVE: MÓVIL */
 @media (max-width: 768px) {
-    .header-content {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    .header-left button {
-        font-size: 1.3em;
-        padding-left: 8px;
-        width: auto;
+
+    .header-left button img {
+        height: 250px;
     }
 
-    .header-content {
-        flex-direction: column;
-        padding: 3px;
-        gap: 10px;
-        align-items: stretch;
-    }
-
-    .header-left {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .header-left button {
-        width: 100%;
-        font-size: 1.1em;
-        padding: 10px;
-    }
-
-    .header-center {
-        width: 100%;
-        justify-content: center;
-    }
-        footer {
+    footer {
         padding: 20px 12px;
     }
-
     footer button {
         font-size: 0.9em;
         padding: 6px 10px;
