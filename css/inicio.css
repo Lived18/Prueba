@@ -31,7 +31,7 @@ header {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 0 16px;
+  padding: 0 10px;
   height: 100%;
 }
 
@@ -49,10 +49,10 @@ header {
 }
 
 .header-left a img {
-  height: 200px;
+  height: 250px;
   width: auto;
   object-fit: contain;
-  padding: 4px 0;
+
 }
 
 /* OCULTAR "BIENVENIDOS" */
@@ -177,11 +177,10 @@ footer p {
 
 /* RESPONSIVE MÓVIL */
 @media (max-width: 768px) {
-  .header-left a img {
-    height: 270px;
-    width: auto;
-    margin-left: 5px;
-  }
+    .header-left button img {
+        height: 250px;
+    }
+
 
   nav ul {
     margin: 230px 0 0 0;
