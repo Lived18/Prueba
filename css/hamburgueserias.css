@@ -497,4 +497,13 @@ footer p {
         font-size: 28px;
         padding: 30px 15px;
     }
+    .carrusel-link {
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.carrusel-link img {
+    width: 100%;
+}
 }
