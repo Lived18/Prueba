@@ -11,7 +11,7 @@ button,
 input {
     font-family: 'calsans-regular', Arial, sans-serif;
     font-weight: 300;
-    background-color: #000;
+    background-color: #090909;
     color: #fff;
 }
 
@@ -23,7 +23,7 @@ body {
 
 /* HEADER */
 header {
-    background-color: #000;
+    background-color: #090909;
     color: #fff;
     padding: 0;
     display: flex;
@@ -68,7 +68,7 @@ header {
 .banner-promos {
     width: 100%;
     height: 100px;
-    background-color: #000;
+    background-color: #090909;
     border-bottom: 2px solid #fff;
     display: flex;
     align-items: center;
@@ -117,7 +117,7 @@ header {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    background: #000;
+    background: #090909;
 }
 
 .promo-card img {
@@ -143,6 +143,30 @@ header {
 .promo-info p {
     font-size: 0.9em;
     color: #999;
+}
+.link-directo {
+    padding: 14px 16px;
+    border-top: 2px solid #fff;
+}
+
+.link-directo button {
+    width: 100%;
+    background: #090909;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    padding: 12px 0;
+    font-family: 'calsans-regular', Arial, sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.link-directo button:hover {
+    background-color: #fff;
+    color: #000;
 }
 
 /* FOOTER */
@@ -201,6 +225,7 @@ footer p {
     .promos-lista {
         padding: 16px 12px;
         gap: 16px;
+        font-family: 'calsans-regular', Arial, sans-serif;
     }
 
     .promo-info h2 {
