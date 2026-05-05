@@ -88,11 +88,11 @@ header {
     display: block;
     width: fit-content;
     margin: 0 auto 20px auto;
-    margin-top: -30px;
+    margin-top: -20px;
     text-align: center;
-    font-size: 2em;
-    font-weight: 300;
-    letter-spacing: 1px;
+    font-size: 1.8em;
+    font-weight: 850;
+    letter-spacing: 0px;
     color: #fff;
     background: none;
     border: none;
@@ -102,13 +102,13 @@ header {
 }
 
 .btn-promos:hover {
-    color: #ccc;
+    color: #fffefe;
 }
 
 /* BUSCADOR */
 #buscador-locales {
     display: flex;
-    border: 2px solid #fff;
+    border: 2px solid #ffffff62;
     border-radius: 12px;
     background: #000;
     align-items: center;
@@ -210,13 +210,14 @@ header {
     flex: 1 1 auto;
     min-width: 0;
     color: #fff;
-    font-size: 2em;
+    font-size: 1.3em;
     font-weight: 300;
-    letter-spacing: 2px;
+    letter-spacing: 1.0px;
     margin: 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    
 }
 
 .locales-grid {
@@ -228,7 +229,7 @@ header {
 /* TARJETAS DE LOCALES */
 .local {
     background: #000;
-    border: 2px solid #fff;
+    border: 1.8px solid #fff;
     border-radius: 14px;
     padding: 16px;
     display: flex;
@@ -343,7 +344,7 @@ footer p {
 .carrusel-container {
     position: relative;
     width: 100%;
-    margin: 20px 0;
+    margin: px 0;
     overflow: hidden;
     background-color: #000;
 }
@@ -357,7 +358,7 @@ footer p {
 .carrusel-imagen {
     min-width: 100%;
     aspect-ratio: 16 / 9;
-    object-fit: contain;
+    object-fit: relati;
     display: block;
 }
 
@@ -374,8 +375,18 @@ footer p {
     border: none;
 }
 
-.carrusel-prev { left: 10px; }
-.carrusel-next { right: 10px; }
+.carrusel-link {
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.carrusel-link img {
+    width: 100%;
+}
+
+.carrusel-prev { left: 1px; }
+.carrusel-next { right: 1px; }
 
 /* RESPONSIVE MÓVIL */
 @media (max-width: 900px) {
@@ -415,7 +426,7 @@ footer p {
     }
 
     .locales-lista {
-        padding: 16px 12px;
+        padding: 1px 10px;
     }
 
     .categoria-header {
@@ -424,8 +435,25 @@ footer p {
         margin-bottom: 12px;
     }
 
+.btn-promos {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 20px auto;
+    margin-top: 0px;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 850;
+    letter-spacing: 0px;
+    color: #fff;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #fff;
+    cursor: pointer;
+    font-family: 'calsans-regular', Arial, sans-serif;
+}
+
     .local {
-        padding: 12px;
+        padding: 10px;
         border-radius: 12px;
     }
 
@@ -462,10 +490,11 @@ footer p {
 
     .carrusel-imagen {
         height: 250px;
+        margin-top: -40px;
     }
 
     .carrusel-btn {
-        font-size: 18px;
-        padding: 8px 12px;
+        font-size: 28px;
+        padding: 30px 15px;
     }
 }

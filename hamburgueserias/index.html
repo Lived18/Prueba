@@ -34,16 +34,24 @@
     </div>
 
     <!-- CARRUSEL DE IMÁGENES -->
-    <div class="carrusel-container">
-        <div class="carrusel-wrapper">
+<div class="carrusel-container">
+    <div class="carrusel-wrapper">
+        <a href="https://wa.me/5493816820505" class="carrusel-link">
             <img class="carrusel-imagen" src="../imagenes/carrusel grande 1.png" alt="Hamburguesa 1">
+        </a>
+        <a href="https://wa.me/5493816820505" class="carrusel-link">
             <img class="carrusel-imagen" src="../imagenes/carrusel grande 2.png" alt="Hamburguesa 2">
+        </a>
+        <a href="https://wa.me/5493816820505" class="carrusel-link">
             <img class="carrusel-imagen" src="../imagenes/carrusel grande 3.png" alt="Hamburguesa 3">
+        </a>
+        <a href="https://wa.me/5493816820505" class="carrusel-link">
             <img class="carrusel-imagen" src="../imagenes/carrusel grande 4.png" alt="Hamburguesa 4">
-        </div>
-        <button class="carrusel-btn carrusel-prev" onclick="moverCarrusel(-1)">❮</button>
-        <button class="carrusel-btn carrusel-next" onclick="moverCarrusel(1)">❯</button>
+        </a>
     </div>
+    <button class="carrusel-btn carrusel-prev" onclick="moverCarrusel(-1)">❮</button>
+    <button class="carrusel-btn carrusel-next" onclick="moverCarrusel(1)">❯</button>
+</div>  
 
     <h1>Hamburgueserías</h1>
 
@@ -80,7 +88,7 @@
             const industriales = locales.filter(local => local.tipo === "Industrial");
 
             if (artesanales.length > 0) {
-                contenedor.innerHTML += crearSeccionCategoria("ARTESANALES", artesanales);
+                contenedor.innerHTML += crearSeccionCategoria("CASERAS", artesanales);
             }
 
             if (industriales.length > 0) {
@@ -93,11 +101,11 @@
         function crearSeccionCategoria(titulo, locales) {
         let html = `
             <div class="seccion-categoria">
-                ${titulo === "ARTESANALES" ? `
+                ${titulo === "CASERAS" ? `
             <button class="btn-promos" onclick="window.location.href='../promos'">VER PROMOS</button>
             <form id="buscador-locales" action="#" method="get">
-            <input type="text" placeholder="Buscar..." name="busqueda" id="busqueda-locales" autocomplete="off">
-            <button type="submit" aria-label="Buscar" style="font-size: 1.5em; border: none;">🔍</button>
+            <input type="text" placeholder="Buscar hamburgueserias..." name="busqueda" id="busqueda-locales" autocomplete="off">
+            <button type="submit" font-family='calsans-regular', Arial, sans-serif; style="font-size: 1.5em; border: none;">🔍</button>
             </form>
                 ` : ''}
                 <div class="categoria-header">
