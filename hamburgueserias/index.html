@@ -7,7 +7,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-4LLS0V7R0J');
 </script>
     <meta charset="UTF-8">
@@ -15,13 +14,170 @@
     <title>DONDE LO ENCUENTRO</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/hamburgueserias.css">
+
+    <!-- ── ESTILOS DEL FILTRO ── -->
+    <style>
+        .filtro-category-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+
+        .filtro-wrapper {
+            position: relative;
+        }
+        .filtro-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: #1e1e1e;
+            border: 1px solid #444;
+            border-radius: 20px;
+            padding: 7px 13px;
+            color: #ccc;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: border-color 0.2s, color 0.2s, background 0.2s;
+            white-space: nowrap;
+        }
+        .filtro-btn:hover,
+        .filtro-btn--active {
+            border-color: #4da6ff;
+            color: #4da6ff;
+            background: #0d2340;
+        }
+        .filtro-badge {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            background: #4da6ff;
+            color: #fff;
+            border-radius: 50%;
+            width: 17px;
+            height: 17px;
+            font-size: 10px;
+            font-weight: 700;
+            line-height: 1;
+            margin-left: 2px;
+        }
+        .filtro-dropdown {
+            display: none;
+            position: absolute;
+            top: calc(100% + 8px);
+            right: 0;
+            background: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 8px 6px;
+            z-index: 9999;
+            min-width: 210px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+        }
+        .filtro-dropdown--open { display: block; }
+        .filtro-section-label {
+            font-size: 10px;
+            color: #666;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 8px 10px 4px;
+            margin: 0;
+        }
+        .filtro-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            color: #ccc;
+            font-size: 13px;
+            transition: background 0.15s;
+            user-select: none;
+        }
+        .filtro-option:hover { background: #2a2a2a; }
+        .filtro-option--selected { color: #4da6ff; }
+        .filtro-check {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            border: 1.5px solid #444;
+            flex-shrink: 0;
+            transition: background 0.15s, border-color 0.15s;
+        }
+        .filtro-option--selected .filtro-check {
+            background: #4da6ff;
+            border-color: #4da6ff;
+        }
+        .filtro-check-icon {
+            width: 10px;
+            height: 10px;
+            stroke: #fff;
+            display: none;
+        }
+        .filtro-option--selected .filtro-check-icon { display: block; }
+        .filtro-divider {
+            border: none;
+            border-top: 1px solid #2a2a2a;
+            margin: 6px 8px;
+        }
+        .filtro-clear {
+            display: block;
+            width: calc(100% - 16px);
+            margin: 8px 8px 4px;
+            padding: 8px;
+            background: transparent;
+            border: 1px solid #444;
+            border-radius: 8px;
+            color: #888;
+            font-size: 12px;
+            cursor: pointer;
+            transition: border-color 0.15s, color 0.15s;
+            text-align: center;
+        }
+        .filtro-clear:hover { border-color: #ff6b6b; color: #ff6b6b; }
+        .filtro-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 10px;
+        }
+        .filtro-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: #0d2340;
+            border: 1px solid #4da6ff;
+            border-radius: 20px;
+            padding: 5px 11px;
+            color: #4da6ff;
+            font-size: 11px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+        .filtro-pill:hover { background: #1a3a5c; }
+        .filtro-pill span { font-size: 14px; opacity: 0.8; margin-left: 2px; }
+        .sin-resultados-filtro {
+            text-align: center;
+            color: #666;
+            padding: 20px;
+            font-size: 13px;
+            display: none;
+        }
+    </style>
 </head>
 <body>
 
     <header>
         <div class="header-content">
             <div class="header-left">
-                <!-- Logo para redireccionar al index -->
                 <button onclick="window.location.href='../'">
                     <img src="../imagenes/Logo-dondeloencuentro.png" alt="DONDE LO ENCUENTRO">
                 </button>
@@ -34,24 +190,24 @@
     </div>
 
     <!-- CARRUSEL DE IMÁGENES -->
-<div class="carrusel-container">
-    <div class="carrusel-wrapper">
-        <a href="https://wa.me/5493816820505" class="carrusel-link">
-            <img class="carrusel-imagen" src="../imagenes/carrusel grande 1.png" alt="Hamburguesa 1">
-        </a>
-        <a href="https://wa.me/5493816820505" class="carrusel-link">
-            <img class="carrusel-imagen" src="../imagenes/carrusel grande 2.png" alt="Hamburguesa 2">
-        </a>
-        <a href="https://wa.me/5493816820505" class="carrusel-link">
-            <img class="carrusel-imagen" src="../imagenes/carrusel grande 3.png" alt="Hamburguesa 3">
-        </a>
-        <a href="https://wa.me/5493816820505" class="carrusel-link">
-            <img class="carrusel-imagen" src="../imagenes/carrusel grande 4.png" alt="Hamburguesa 4">
-        </a>
+    <div class="carrusel-container">
+        <div class="carrusel-wrapper">
+            <a href="https://wa.me/5493816820505" class="carrusel-link">
+                <img class="carrusel-imagen" src="../imagenes/carrusel grande 1.png" alt="Hamburguesa 1">
+            </a>
+            <a href="https://wa.me/5493816820505" class="carrusel-link">
+                <img class="carrusel-imagen" src="../imagenes/carrusel grande 2.png" alt="Hamburguesa 2">
+            </a>
+            <a href="https://wa.me/5493816820505" class="carrusel-link">
+                <img class="carrusel-imagen" src="../imagenes/carrusel grande 3.png" alt="Hamburguesa 3">
+            </a>
+            <a href="https://wa.me/5493816820505" class="carrusel-link">
+                <img class="carrusel-imagen" src="../imagenes/carrusel grande 4.png" alt="Hamburguesa 4">
+            </a>
+        </div>
+        <button class="carrusel-btn carrusel-prev" onclick="moverCarrusel(-1)">❮</button>
+        <button class="carrusel-btn carrusel-next" onclick="moverCarrusel(1)">❯</button>
     </div>
-    <button class="carrusel-btn carrusel-prev" onclick="moverCarrusel(-1)">❮</button>
-    <button class="carrusel-btn carrusel-next" onclick="moverCarrusel(1)">❯</button>
-</div>  
 
     <h1>Hamburgueserías</h1>
 
@@ -69,57 +225,189 @@
     </footer>
 
     <script>
-        // CARGA DE LOCALES DESDE JSON
+        // ═══════════════════════════════════════════════
+        //  CARGA DE LOCALES DESDE JSON
+        // ═══════════════════════════════════════════════
         async function cargarLocales() {
             try {
-                const respuesta = await fetch("../data/locales.json");
+                const respuesta = await fetch("../data/Locales_finales.json");
                 const locales = await respuesta.json();
                 renderizarLocales(locales);
             } catch (error) {
-                console.error("Error cargando locales.json:", error);
+                console.error("Error cargando Locales_finales.json:", error);
             }
         }
-        // RENDERIZAR LOCALES EN LA PÁGINA
+
+        // ═══════════════════════════════════════════════
+        //  RENDERIZAR LOCALES EN LA PÁGINA
+        // ═══════════════════════════════════════════════
         function renderizarLocales(locales) {
             const contenedor = document.getElementById("lista-locales");
             contenedor.innerHTML = "";
 
-            const artesanales = locales.filter(local => local.tipo === "Artesanal");
-            const industriales = locales.filter(local => local.tipo === "Industrial");
+            // Filtrar usando los valores exactos del JSON
+            const de_autor = locales.filter(local => (local.tipo || '').trim() === "De Autor");
+            const cadenas  = locales.filter(local => (local.tipo || '').trim() === "Cadenas");
 
-            if (artesanales.length > 0) {
-                contenedor.innerHTML += crearSeccionCategoria("CASERAS", artesanales);
+            if (de_autor.length > 0) {
+                contenedor.innerHTML += crearSeccionCategoria("DE AUTOR", de_autor);
+            }
+            if (cadenas.length > 0) {
+                contenedor.innerHTML += crearSeccionCategoria("CADENAS", cadenas);
             }
 
-            if (industriales.length > 0) {
-                contenedor.innerHTML += crearSeccionCategoria("INDUSTRIALES", industriales);
-            }
-
-            setTimeout(inicializarBuscador, 0);
+            setTimeout(() => {
+                inicializarBuscador();
+                inicializarFiltro();
+            }, 0);
         }
-        // CREAR SECCIÓN DE CATEGORÍA (ARTESANALES O INDUSTRIALES)
+
+        // ═══════════════════════════════════════════════
+        //  CREAR SECCIÓN DE CATEGORÍA
+        // ═══════════════════════════════════════════════
         function crearSeccionCategoria(titulo, locales) {
-        let html = `
-            <div class="seccion-categoria">
-                ${titulo === "CASERAS" ? `
-            <button class="btn-promos" onclick="window.location.href='../promos'">VER PROMOS</button>
-            <form id="buscador-locales" action="#" method="get">
-            <input type="text" placeholder="Buscar hamburgueserias..." name="busqueda" id="busqueda-locales" autocomplete="off">
-            <button type="submit" font-family='calsans-regular', Arial, sans-serif; style="font-size: 1.5em; border: none;">🔍</button>
-            </form>
-                ` : ''}
-                <div class="categoria-header">
-            <h2>${titulo}</h2>
-        </div>  
-                    <div class="locales-grid">
-            `;
-        // Agregar cada local a la sección correspondiente
-            locales.forEach(local => {
+            let html = `<div class="seccion-categoria">`;
+
+            if (titulo === "DE AUTOR") {
                 html += `
-                    <div class="local">
+                <button class="btn-promos" onclick="window.location.href='../promos'">VER PROMOS</button>
+
+                <form id="buscador-locales" action="#" method="get">
+                    <input type="text" placeholder="Buscar hamburgueserias..." name="busqueda" id="busqueda-locales" autocomplete="off">
+                    <button type="submit" style="font-size:1.5em; border:none;">🔍</button>
+                </form>
+
+                <!-- ── HEADER CON TÍTULO + BOTÓN FILTRO ── -->
+                <div class="filtro-category-header">
+                    <div class="categoria-header">
+                        <h2>${titulo}</h2>
+                    </div>
+
+                    <div class="filtro-wrapper">
+                        <button class="filtro-btn" id="filtroBtn" onclick="filtroToggleDropdown()" aria-haspopup="true" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <line x1="4" y1="6" x2="20" y2="6"/>
+                                <line x1="8" y1="12" x2="16" y2="12"/>
+                                <line x1="11" y1="18" x2="13" y2="18"/>
+                            </svg>
+                            Filtrar
+                            <span class="filtro-badge" id="filtroBadge"></span>
+                        </button>
+
+                        <div class="filtro-dropdown" id="filtroDropdown" role="menu">
+
+                            <p class="filtro-section-label">Zona</p>
+
+                            <div class="filtro-option" id="filtro-opt-Yerba Buena" role="menuitemcheckbox"
+                                 tabindex="0" onclick="filtroToggle('zona','Yerba Buena')"
+                                 onkeydown="if(event.key==='Enter')filtroToggle('zona','Yerba Buena')">
+                                <span class="filtro-check">
+                                    <svg class="filtro-check-icon" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </span>
+                                📍 Yerba Buena
+                            </div>
+
+                            <div class="filtro-option" id="filtro-opt-Zona Oeste" role="menuitemcheckbox"
+                                 tabindex="0" onclick="filtroToggle('zona','Zona Oeste')"
+                                 onkeydown="if(event.key==='Enter')filtroToggle('zona','Zona Oeste')">
+                                <span class="filtro-check">
+                                    <svg class="filtro-check-icon" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </span>
+                                📍 Zona Oeste
+                            </div>
+
+                            <div class="filtro-option" id="filtro-opt-Barrio Norte" role="menuitemcheckbox"
+                                 tabindex="0" onclick="filtroToggle('zona','Barrio Norte')"
+                                 onkeydown="if(event.key==='Enter')filtroToggle('zona','Barrio Norte')">
+                                <span class="filtro-check">
+                                    <svg class="filtro-check-icon" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </span>
+                                📍 Barrio Norte
+                            </div>
+
+                            <div class="filtro-option" id="filtro-opt-Barrio Sur" role="menuitemcheckbox"
+                                 tabindex="0" onclick="filtroToggle('zona','Barrio Sur')"
+                                 onkeydown="if(event.key==='Enter')filtroToggle('zona','Barrio Sur')">
+                                <span class="filtro-check">
+                                    <svg class="filtro-check-icon" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </span>
+                                📍 Barrio Sur
+                            </div>
+
+                            <hr class="filtro-divider">
+
+                            <p class="filtro-section-label">Tipo de consumo</p>
+
+                            <div class="filtro-option" id="filtro-opt-local" role="menuitemcheckbox"
+                                 tabindex="0" onclick="filtroToggle('tipo','local')"
+                                 onkeydown="if(event.key==='Enter')filtroToggle('tipo','local')">
+                                <span class="filtro-check">
+                                    <svg class="filtro-check-icon" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </span>
+                                🏠 Consumo en local
+                            </div>
+
+                            <div class="filtro-option" id="filtro-opt-delivery" role="menuitemcheckbox"
+                                 tabindex="0" onclick="filtroToggle('tipo','delivery')"
+                                 onkeydown="if(event.key==='Enter')filtroToggle('tipo','delivery')">
+                                <span class="filtro-check">
+                                    <svg class="filtro-check-icon" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </span>
+                                🛵 Delivery
+                            </div>
+
+                            <button class="filtro-clear" id="filtroClear" onclick="filtroClearAll()" style="display:none">
+                                Limpiar filtros
+                            </button>
+
+                        </div><!-- /filtro-dropdown -->
+                    </div><!-- /filtro-wrapper -->
+                </div><!-- /filtro-category-header -->
+
+                <!-- Pills de filtros activos -->
+                <div class="filtro-pills" id="filtroPills"></div>
+                <div class="sin-resultados-filtro" id="sinResultadosFiltro">😕 Sin resultados con estos filtros</div>
+                `;
+            } else {
+                // Para CADENAS u otras categorías: header simple sin filtro
+                html += `<div class="categoria-header"><h2>${titulo}</h2></div>`;
+            }
+
+            html += `<div class="locales-grid">`;
+
+            locales.forEach(local => {
+                const zona  = (local.zona    || '').trim();
+                const consumoRaw = (local.consumo || '').trim().toLowerCase();
+                const tipo  = consumoRaw === 'delivery' ? 'delivery' : 'local';
+
+                // Todas las cards llevan data-zona y data-tipo (DE AUTOR y CADENAS)
+                const dataAttrs = 'data-zona="' + zona + '" data-tipo="' + tipo + '"';
+
+                html += `
+                    <div class="local" ${dataAttrs}>
                         <div>
                             <h2>${local.nombre}</h2>
                             <p>${local.dirección}</p>
+                            <p>${local.zona}</p>
                         </div>
                         <div class="redes">
                             <button onclick="window.location.href='${local.instagram}'" title="Instagram">
@@ -133,46 +421,155 @@
                 `;
             });
 
-            html += `
-                    </div>
-                </div>
-            `;
-
+            html += `</div></div>`;
             return html;
         }
-        // INICIALIZAR FUNCIONALIDAD DE BUSCADOR
+
+        // ═══════════════════════════════════════════════
+        //  BUSCADOR
+        // ═══════════════════════════════════════════════
         function inicializarBuscador() {
-            const buscador = document.getElementById('buscador-locales');
+            const buscador     = document.getElementById('buscador-locales');
             const busquedaInput = document.getElementById('busqueda-locales');
-            
             if (!buscador) return;
 
             buscador.addEventListener('submit', function(e) {
                 e.preventDefault();
-                const filtro = busquedaInput.value.toLowerCase();
-                const locales = document.querySelectorAll('.locales-lista .local');
-                locales.forEach(local => {
-                    const nombre = local.querySelector('h2').textContent.toLowerCase();
-                    if (nombre.includes(filtro)) {
-                        local.style.display = '';
-                    } else {
-                        local.style.display = 'none';
-                    }
-                });
+                aplicarFiltrosCombinados();
             });
 
             busquedaInput.addEventListener('input', function() {
-                if (this.value === '') {
-                    document.querySelectorAll('.locales-lista .local').forEach(local => {
-                        local.style.display = '';
-                    });
+                aplicarFiltrosCombinados();
+            });
+        }
+
+        // ═══════════════════════════════════════════════
+        //  FILTRO POR ZONA / TIPO DE CONSUMO
+        // ═══════════════════════════════════════════════
+        var filtroActivo = { zona: [], tipo: [] };
+
+        function inicializarFiltro() {
+            // Cerrar dropdown al hacer clic fuera
+            document.addEventListener('click', function(e) {
+                var wrapper = document.querySelector('.filtro-wrapper');
+                var dropdown = document.getElementById('filtroDropdown');
+                var btn = document.getElementById('filtroBtn');
+                if (!wrapper || !dropdown) return;
+                if (!wrapper.contains(e.target)) {
+                    dropdown.classList.remove('filtro-dropdown--open');
+                    if (btn) {
+                        btn.classList.remove('filtro-btn--active');
+                        btn.setAttribute('aria-expanded', 'false');
+                    }
                 }
             });
         }
 
+        function filtroToggleDropdown() {
+            var dd  = document.getElementById('filtroDropdown');
+            var btn = document.getElementById('filtroBtn');
+            if (!dd) return;
+            var abierto = dd.classList.toggle('filtro-dropdown--open');
+            btn.classList.toggle('filtro-btn--active', abierto);
+            btn.setAttribute('aria-expanded', String(abierto));
+        }
+
+        function filtroToggle(tipo, valor) {
+            var arr = filtroActivo[tipo];
+            var idx = arr.indexOf(valor);
+            if (idx === -1) arr.push(valor);
+            else arr.splice(idx, 1);
+
+            var el = document.getElementById('filtro-opt-' + valor);
+            if (el) el.classList.toggle('filtro-option--selected', arr.includes(valor));
+
+            filtroUpdateBadge();
+            filtroRenderPills();
+            aplicarFiltrosCombinados();
+        }
+
+        function filtroClearAll() {
+            filtroActivo = { zona: [], tipo: [] };
+            document.querySelectorAll('.filtro-option').forEach(function(el) {
+                el.classList.remove('filtro-option--selected');
+            });
+            filtroUpdateBadge();
+            filtroRenderPills();
+            aplicarFiltrosCombinados();
+        }
+
+        function filtroUpdateBadge() {
+            var count = filtroActivo.zona.length + filtroActivo.tipo.length;
+            var badge = document.getElementById('filtroBadge');
+            var clear = document.getElementById('filtroClear');
+            if (badge) {
+                badge.textContent = count > 0 ? count : '';
+                badge.style.display = count > 0 ? 'flex' : 'none';
+            }
+            if (clear) clear.style.display = count > 0 ? 'block' : 'none';
+        }
+
+        function filtroRenderPills() {
+            var container = document.getElementById('filtroPills');
+            if (!container) return;
+            container.innerHTML = '';
+
+            filtroActivo.zona.forEach(function(v) {
+                var p = document.createElement('button');
+                p.className = 'filtro-pill';
+                p.innerHTML = '📍 ' + v + ' <span>×</span>';
+                p.setAttribute('aria-label', 'Quitar filtro ' + v);
+                p.onclick = function() { filtroToggle('zona', v); };
+                container.appendChild(p);
+            });
+
+            filtroActivo.tipo.forEach(function(v) {
+                var label = v === 'local' ? 'En local' : 'Delivery';
+                var icon  = v === 'local' ? '🏠' : '🛵';
+                var p = document.createElement('button');
+                p.className = 'filtro-pill';
+                p.innerHTML = icon + ' ' + label + ' <span>×</span>';
+                p.setAttribute('aria-label', 'Quitar filtro ' + label);
+                p.onclick = function() { filtroToggle('tipo', v); };
+                container.appendChild(p);
+            });
+        }
+
+        // ═══════════════════════════════════════════════
+        //  FUNCIÓN COMBINADA: buscador + filtro juntos
+        // ═══════════════════════════════════════════════
+        function aplicarFiltrosCombinados() {
+            var busquedaInput = document.getElementById('busqueda-locales');
+            var query = busquedaInput ? busquedaInput.value.toLowerCase().trim() : '';
+
+            var hayFiltros = filtroActivo.zona.length > 0 || filtroActivo.tipo.length > 0;
+            var visibles = 0;
+
+            document.querySelectorAll('.locales-lista .local').forEach(function(card) {
+                var nombre = card.querySelector('h2') ? card.querySelector('h2').textContent.toLowerCase() : '';
+                var zonaCard = (card.getAttribute('data-zona') || '').trim();
+                var tipoCard = (card.getAttribute('data-tipo') || '').trim();
+
+                var okBusqueda = query === '' || nombre.includes(query);
+                var okZona = filtroActivo.zona.length === 0 || filtroActivo.zona.indexOf(zonaCard) !== -1;
+                var okTipo = filtroActivo.tipo.length === 0 || filtroActivo.tipo.indexOf(tipoCard) !== -1;
+
+                var mostrar = okBusqueda && okZona && okTipo;
+                card.style.display = mostrar ? '' : 'none';
+                if (mostrar) visibles++;
+            });
+
+            var sinResultados = document.getElementById('sinResultadosFiltro');
+            if (sinResultados) {
+                sinResultados.style.display = (hayFiltros && visibles === 0) ? 'block' : 'none';
+            }
+        }
+
         cargarLocales();
 
-        // CARRUSEL AUTOMÁTICO
+        // ═══════════════════════════════════════════════
+        //  CARRUSEL AUTOMÁTICO
+        // ═══════════════════════════════════════════════
         let indiceCarrusel = 0;
         const imagenes = document.querySelectorAll('.carrusel-imagen');
         const totalImagenes = imagenes.length;
@@ -188,9 +585,7 @@
             clearInterval(intervaloCarrusel);
             intervaloCarrusel = setInterval(() => {
                 indiceCarrusel += 1;
-                if (indiceCarrusel >= totalImagenes) {
-                    indiceCarrusel = 0;
-                }
+                if (indiceCarrusel >= totalImagenes) indiceCarrusel = 0;
                 actualizarCarrusel();
             }, 5000);
         }
@@ -198,8 +593,6 @@
         function pausarYReiniciarIntervalo() {
             clearInterval(intervaloCarrusel);
             clearTimeout(tiempoReinicioIntervalo);
-            
-            // Reiniciar el intervalo automático después de 3 segundos de inactividad
             tiempoReinicioIntervalo = setTimeout(() => {
                 iniciarIntervaloAutomatico();
             }, 3000);
@@ -207,16 +600,12 @@
 
         function moverCarrusel(direccion) {
             indiceCarrusel += direccion;
-            if (indiceCarrusel < 0) {
-                indiceCarrusel = totalImagenes - 1;
-            } else if (indiceCarrusel >= totalImagenes) {
-                indiceCarrusel = 0;
-            }
+            if (indiceCarrusel < 0) indiceCarrusel = totalImagenes - 1;
+            else if (indiceCarrusel >= totalImagenes) indiceCarrusel = 0;
             actualizarCarrusel();
             pausarYReiniciarIntervalo();
         }
 
-        // Iniciar el carrusel automático
         iniciarIntervaloAutomatico();
     </script>
 </body>
