@@ -1,0 +1,632 @@
+[
+  {
+    "nombre": "Apolo Burger",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/apoloburger.tuc?utm_source=ig_web_button_share_sheet&igsh=MWZiN2hqYTNqNXZvbQ==",
+    "whatsapp": "https://wa.me/5493815813381",
+    "dirección": "Los ceibos 198",
+    "zona": "Yerba Buena",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Bartolo Tuc",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/bartolo.tuc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    "whatsapp": "https://wa.me/5493816435042",
+    "dirección": "Lamadrid 1238",
+    "zona": "Yerba Buena",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Big Fat Burger´s",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/bigfatburger.s?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    "whatsapp": "https://wa.me/5493816379192",
+    "dirección": "Don Bosco 2233",
+    "zona": "Zona Oeste",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Big Yola",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/big.yolaa?utm_source=ig_web_button_share_sheet&igsh=YXY5cmgzNGl2MGNj",
+    "whatsapp": "https://wa.me/5493815859215",
+    "dirección": "Paraguay 4357",
+    "zona": "Zona Oeste",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Billy Bob Burguers",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/billybob.burgers/",
+    "whatsapp": "https://wa.me/5493816820505",
+    "dirección": "Marcos Paz 581",
+    "zona": "Barrio Norte",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Billy Bob Burguers",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/billybob.burgers/",
+    "whatsapp": "https://wa.me/5493814050704",
+    "dirección": "Aconquija 365",
+    "zona": "Yerba Buena",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Blend´s",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/blends.tuc?utm_source=ig_web_button_share_sheet&igsh=NndpaWkxdDU5Z3k1",
+    "whatsapp": "https://wa.me/5493813662864",
+    "dirección": "Juan B. Justo 921",
+    "zona": "Barrio Norte",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Boom Burgers",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/boomburgers.tuc?utm_source=ig_web_button_share_sheet&igsh=MWxjM3B4ZThnMjE0Nw==",
+    "whatsapp": "https://wa.me/5493812235011",
+    "dirección": "Alem 823",
+    "zona": "Barrio Sur",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Broda",
+    "consumo": "delivery",
+    "instagram": "https://www.instagram.com/broda.burger?utm_source=ig_web_button_share_sheet&igsh=N2J6enM4NzBoOTN2",
+    "whatsapp": "https://wa.me/5493812108305",
+    "dirección": "República de Siria 1044",
+    "zona": "Barrio Norte",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Burger Factory",
+    "consumo": "delivery",
+    "instagram": "https://www.instagram.com/burgerfactorytuc?utm_source=ig_web_button_share_sheet&igsh=NGZuNHdiaGY5Znlp",
+    "whatsapp": "https://wa.me/5493813502329",
+    "dirección": "Catamarca 484",
+    "zona": "Barrio Norte",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Burger Factory",
+    "consumo": "delivery",
+    "instagram": "https://www.instagram.com/burgerfactorytuc?utm_source=ig_web_button_share_sheet&igsh=NGZuNHdiaGY5Znlp",
+    "whatsapp": "https://wa.me/5493814432128",
+    "dirección": "Av. Aconquija 2280",
+    "zona": "Yerba Buena",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Burger K",
+    "consumo": "delivery",
+    "instagram": "https://www.instagram.com/burgerktucuman?utm_source=ig_web_button_share_sheet&igsh=cmRxMjlibjExbnpz",
+    "whatsapp": "https://wa.me/5493813040224",
+    "dirección": "Prov. De La Rioja 3450",
+    "zona": "Barrio Sur",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Burgers!",
+    "consumo": "delivery",
+    "instagram": "https://www.instagram.com/burgers.yb?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    "whatsapp": "https://wa.me/5493813671917",
+    "dirección": "La Pampa 1251",
+    "zona": "Yerba Buena",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Burguett",
+    "consumo": "delivery",
+    "instagram": "https://www.instagram.com/burgett.tuc?utm_source=ig_web_button_share_sheet&igsh=MWIza3draTk5Mzdmdg==",
+    "whatsapp": "https://wa.me/5493812111677",
+    "dirección": "Bernabé Araoz 281",
+    "zona": "Barrio Sur",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Chino Burgers",
+    "consumo": "delivery",
+    "instagram": "https://www.instagram.com/chinoburgers.tuc?utm_source=ig_web_button_share_sheet&igsh=dTFiZXdvZTcwYzF0",
+    "whatsapp": "https://wa.me/5493813359728",
+    "dirección": "Av. Siria 1418",
+    "zona": "Barrio Norte",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Chitos",
+    "consumo": "delivery",
+    "instagram": "https://www.instagram.com/chitos.tuc?utm_source=ig_web_button_share_sheet&igsh=emM1N3FnOGZscjU0",
+    "whatsapp": "https://wa.me/5493816292735",
+    "dirección": "San Martín al 3800",
+    "zona": "Zona Oeste",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Dadin Burgers",
+    "consumo": "delivery",
+    "instagram": "https://www.instagram.com/dadinburgers?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    "whatsapp": "https://wa.me/5493816277158",
+    "dirección": "Buenos aires 367",
+    "zona": "Barrio Sur",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Dinx Burger",
+    "consumo": "delivery",
+    "instagram": "https://www.instagram.com/dinx.burger?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    "whatsapp": "https://wa.me/5493816314663",
+    "dirección": "Barrio ciudadela",
+    "zona": "Zona Oeste",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "El gordo burger",
+    "consumo": "delivery",
+    "instagram": "https://www.instagram.com/elgordoburgertuc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    "whatsapp": "https://wa.me/5493813889021",
+    "dirección": "Esteban Echeverría 2019",
+    "zona": "Zona Oeste",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Family Burgers",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/familyburgers.tuc?utm_source=ig_web_button_share_sheet&igsh=MXE3N2s0OXM2ZDNvOA==",
+    "whatsapp": "https://wa.me/5493816698974",
+    "dirección": "Montevideo 2112",
+    "zona": "Barrio Sur",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Frank Beer",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/frankbeer.tuc?utm_source=ig_web_button_share_sheet&igsh=MWtjNXVxZWg1enNpZg==",
+    "whatsapp": "https://wa.me/5493816266992",
+    "dirección": "25 de Mayo 741",
+    "zona": "Barrio Norte",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Fuga Burger",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/fugaburger_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    "whatsapp": "https://www.pedidosya.com.ar/restaurantes/san-miguel-de-tucuman/dean-and-dennys-tucuman-e452bfd8-ca00-4937-869c-8a79d6d37ec3-menu?search=dean+and",
+    "dirección": "Av. Belgrano 2490",
+    "zona": "Zona Oeste",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Grilx",
+    "consumo": "delivery",
+    "instagram": "https://www.instagram.com/pedigrilx?utm_source=ig_web_button_share_sheet&igsh=N3Vsa3EzamI4N2s=",
+    "whatsapp": "https://wa.me/5493815325347",
+    "dirección": "Av. Sarmiento 183",
+    "zona": "Barrio Norte",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "House Burger",
+    "consumo": "delivery",
+    "instagram": "https://www.instagram.com/houseburgertuc?utm_source=ig_web_button_share_sheet&igsh=ZGpyNjUyd3F6Y3Bu",
+    "whatsapp": "https://wa.me/5493814752804",
+    "dirección": "Lavaissé 1869",
+    "zona": "Barrio Sur",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Ke Burgers",
+    "consumo": "delivery",
+    "instagram": "https://www.instagram.com/ke_burgers1?utm_source=ig_web_button_share_sheet&igsh=Y2ppd29wcmlydWVw",
+    "whatsapp": "https://wa.me/5493813463744",
+    "dirección": "José Rondeau 3139",
+    "zona": "Zona Oeste",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "La Burguesa",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/laburguesa.arg/",
+    "whatsapp": "https://wa.me/5493813641518",
+    "dirección": "Lavalle 1287",
+    "zona": "Barrio Sur",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "La Burguesa",
+    "consumo": "delivery",
+    "instagram": "https://www.instagram.com/laburguesa.arg/",
+    "whatsapp": "https://wa.me/5493815289847",
+    "dirección": "Rosario T.Vildoza 850",
+    "zona": "Zona Oeste",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "La Focata",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/lafocata?utm_source=ig_web_button_share_sheet&igsh=MTVkYTVtcnVjd3JkNA==",
+    "whatsapp": "https://wa.me/5493816239822",
+    "dirección": "Colombia 3559",
+    "zona": "Zona Oeste",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Leno",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/lenoargentina?utm_source=ig_web_button_share_sheet&igsh=MXA1c2g1ZDQxczFhaA==",
+    "whatsapp": "https://wa.me/5493812365094",
+    "dirección": "Virgen de la Merced 885",
+    "zona": "Barrio Norte",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Leno",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/lenoargentina?utm_source=ig_web_button_share_sheet&igsh=MXA1c2g1ZDQxczFhaA==",
+    "whatsapp": "https://wa.me/5493815512882",
+    "dirección": "Buenos Aires 683",
+    "zona": "Barrio Sur",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Leno",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/lenoargentina?utm_source=ig_web_button_share_sheet&igsh=MXA1c2g1ZDQxczFhaA==",
+    "whatsapp": "https://wa.me/5493813966286",
+    "dirección": "24 de septiembre 468",
+    "zona": "Barrio Norte",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Leno",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/lenoargentina?utm_source=ig_web_button_share_sheet&igsh=MXA1c2g1ZDQxczFhaA==",
+    "whatsapp": "https://wa.me/5493814480036",
+    "dirección": "Av. Aconquija 365",
+    "zona": "Yerba Buena",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Leno",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/lenoargentina?utm_source=ig_web_button_share_sheet&igsh=MXA1c2g1ZDQxczFhaA==",
+    "whatsapp": "https://wa.me/5493812126360",
+    "dirección": "Av. Perón 1750",
+    "zona": "Yerba Buena",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Leno",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/lenoargentina?utm_source=ig_web_button_share_sheet&igsh=MXA1c2g1ZDQxczFhaA==",
+    "whatsapp": "https://wa.me/5493812235941",
+    "dirección": "Av. Aconquija 1336",
+    "zona": "Yerba Buena",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Ludwig",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/ludwig.tuc?utm_source=ig_web_button_share_sheet&igsh=MW43azAxMWR6Z3podg==",
+    "whatsapp": "https://wa.me/5493814698218",
+    "dirección": "Av. Salta y Santa Fe",
+    "zona": "Barrio Norte",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Mainz",
+    "consumo": "delivery",
+    "instagram": "https://www.instagram.com/mainz.tuc?utm_source=ig_web_button_share_sheet&igsh=MWg3dXZldnZkaXp6NQ==",
+    "whatsapp": "https://wa.me/5493813881160",
+    "dirección": "Santa fe 1343",
+    "zona": "Zona Oeste",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Meta Burguer",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/metaburgernomas?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    "whatsapp": "https://wa.me/5493816667642",
+    "dirección": "Av. Belgrano 4305",
+    "zona": "Zona Oeste",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Meta Burguer",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/metaburgernomas?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    "whatsapp": "https://wa.me/5493815674908",
+    "dirección": "Lomas de Tafí, Sector 16 Mz 3 Casa19",
+    "zona": "Zona Oeste",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Mr Burgers",
+    "consumo": "delivery",
+    "instagram": "https://www.instagram.com/mrburgers59?utm_source=ig_web_button_share_sheet&igsh=dW5idWl1dW1tb2to",
+    "whatsapp": "https://wa.me/5493814443705",
+    "dirección": "Paraguay 4593",
+    "zona": "Zona Oeste",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Munch Burger",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/munchburger.tuc?utm_source=ig_web_button_share_sheet&igsh=Zm83MXBraDF0cmZi",
+    "whatsapp": "https://wa.me/5493813638724",
+    "dirección": "Lamadrid 804",
+    "zona": "Barrio Sur",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Munch Burger",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/munchburger.tuc?utm_source=ig_web_button_share_sheet&igsh=Zm83MXBraDF0cmZi",
+    "whatsapp": "https://wa.me/5493812181276",
+    "dirección": "San Juan 3939",
+    "zona": "Zona Oeste",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Papos Burger",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/papo.sburgers?utm_source=ig_web_button_share_sheet&igsh=N2Q2ajNhOW1uaWhy",
+    "whatsapp": "https://wa.me/5493815192614",
+    "dirección": "Constitución 2010",
+    "zona": "Barrio Sur",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Pepinillo",
+    "consumo": "delivery",
+    "instagram": "https://www.instagram.com/pepinillo.burger?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    "whatsapp": "https://wa.me/5493815971191",
+    "dirección": "Lamadrid 731",
+    "zona": "Barrio Sur",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Petersburg",
+    "consumo": "delivery",
+    "instagram": "https://www.instagram.com/petersburg.tuc?utm_source=ig_web_button_share_sheet&igsh=OHU4NXBnOXUwbDlz",
+    "whatsapp": "https://wa.me/5493816161659",
+    "dirección": "Estanislao del Campo 1281",
+    "zona": "Barrio Norte",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Riva´s Burger",
+    "consumo": "delivery",
+    "instagram": "https://www.instagram.com/rivas.burger/?utm_source=ig_web_button_share_sheet",
+    "whatsapp": "https://wa.me/5493816399399",
+    "dirección": "San Lorenzo y Jujuy",
+    "zona": "Barrio Sur",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Ruddys",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/ruddys.arg?utm_source=ig_web_button_share_sheet&igsh=MWxwbmoxZXo4cTM2aA==",
+    "whatsapp": "https://wa.me/5493816698699",
+    "dirección": "25 de Mayo 515",
+    "zona": "Barrio Norte",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Ruddys",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/ruddys.arg?utm_source=ig_web_button_share_sheet&igsh=MWxwbmoxZXo4cTM2aA==",
+    "whatsapp": "https://wa.me/5493816698699",
+    "dirección": "Santa Fe 277",
+    "zona": "Barrio Norte",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Ruddys",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/ruddys.arg?utm_source=ig_web_button_share_sheet&igsh=MWxwbmoxZXo4cTM2aA==",
+    "whatsapp": "https://wa.me/5493816698699",
+    "dirección": "Gral. Paz 554",
+    "zona": "Barrio Sur",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Ruddys",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/ruddys.arg?utm_source=ig_web_button_share_sheet&igsh=MWxwbmoxZXo4cTM2aA==",
+    "whatsapp": "https://wa.me/5793816698699",
+    "dirección": "Av. Perón 1850",
+    "zona": "Yerba Buena",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Ruddys",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/ruddys.arg?utm_source=ig_web_button_share_sheet&igsh=MWxwbmoxZXo4cTM2aA==",
+    "whatsapp": "https://wa.me/5493816698699",
+    "dirección": "Av. Perón 1850",
+    "zona": "Yerba Buena",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Salvando la Papa",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/salvandolapapa?utm_source=ig_web_button_share_sheet&igsh=MXV5cnc5YTY5Z3Fqbg==",
+    "whatsapp": "https://wa.me/5493813931986",
+    "dirección": "Paraguay 4621",
+    "zona": "Zona Oeste",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Santa Burger",
+    "consumo": "delivery",
+    "instagram": "https://www.instagram.com/santa.burguerok?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    "whatsapp": "https://wa.me/5493815133782",
+    "dirección": "Gral. Paz 1983",
+    "zona": "Zona Oeste",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Señor Burgués",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/senorburgues?utm_source=ig_web_button_share_sheet&igsh=MXg2MDZpZmZqeGljMQ==",
+    "whatsapp": "https://wa.me/5493813020962",
+    "dirección": "Corrientes 598",
+    "zona": "Barrio Norte",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Shicken Cousins",
+    "consumo": "delivery",
+    "instagram": "https://www.instagram.com/shhhickencousins?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    "whatsapp": "https://wa.me/5493816156466",
+    "dirección": "San Martín 572",
+    "zona": "Yerba Buena",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Sin Culpa Burger",
+    "consumo": "delivery",
+    "instagram": "https://www.instagram.com/sinculpa_burger?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    "whatsapp": "https://wa.me/5493814686394",
+    "dirección": "-",
+    "zona": "Yerba Buena",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Smash Burguer",
+    "consumo": "delivery",
+    "instagram": "https://www.instagram.com/smashburgeryb?utm_source=ig_web_button_share_sheet&igsh=eml1aWxuYXJ0NHVx",
+    "whatsapp": "https://wa.me/5493813666406",
+    "dirección": "Italia 2704",
+    "zona": "Yerba Buena",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Soco Burgers",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/soco.burgers?utm_source=ig_web_button_share_sheet&igsh=NzB1d21rMGpxZWRw",
+    "whatsapp": "https://wa.me/5493813580723",
+    "dirección": "Corrientes 642",
+    "zona": "Barrio Norte",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Tocka Smash",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/tocka.smash?utm_source=ig_web_button_share_sheet&igsh=MTNicWhoNzh0cjFhbg==",
+    "whatsapp": "https://wa.me/5493812002802",
+    "dirección": "Santa Fe 198",
+    "zona": "Barrio Norte",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Tozir Burger",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/tozirburger?utm_source=ig_web_button_share_sheet&igsh=MXF6M2wzcmZ6MW94eg==",
+    "whatsapp": "https://wa.me/5493812143843",
+    "dirección": "Av. Perón 47",
+    "zona": "Yerba Buena",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Turf Burger",
+    "consumo": "delivery",
+    "instagram": "https://www.instagram.com/turf_burgers/?utm_source=ig_web_button_share_sheet",
+    "whatsapp": "https://wa.me/5493815283541",
+    "dirección": "Pasaje Santa Cruz 270",
+    "zona": "Yerba Buena",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Wan Burger y Papas",
+    "consumo": "delivery",
+    "instagram": "https://www.instagram.com/wan_burgerpapas?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    "whatsapp": "https://wa.me/5493813604831",
+    "dirección": "Fray Mamerto Esquiú 1894",
+    "zona": "Zona Oeste",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Weiss",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/weissburgerbar?utm_source=ig_web_button_share_sheet&igsh=MWNkajMxeHdtNGQ2eg==",
+    "whatsapp": "https://wa.me/5493816788745",
+    "dirección": "25 de Mayo 724",
+    "zona": "Barrio Norte",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Yoka Burger",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/yokaburger?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    "whatsapp": "https://wa.me/5493815330267",
+    "dirección": "Congreso 365",
+    "zona": "Barrio Sur",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Zulk",
+    "consumo": "delivery",
+    "instagram": "https://www.instagram.com/zulk.burgers?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    "whatsapp": "https://wa.me/5493812184459",
+    "dirección": "Manuel Estrada 2558",
+    "zona": "Zona Oeste",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Chicken Chill",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/chickenchillarg?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    "whatsapp": "https://www.pedidosya.com.ar/cadenas/chicken-chill",
+    "dirección": "Cariola 42",
+    "zona": "Yerba Buena",
+    "tipo": "Cadenas"
+  },
+  {
+    "nombre": "Chicken Chill",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/chickenchillarg?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    "whatsapp": "https://www.pedidosya.com.ar/cadenas/chicken-chill",
+    "dirección": "24 de Septiembre 460",
+    "zona": "Barrio Norte",
+    "tipo": "Cadenas"
+  },
+  {
+    "nombre": "Dean & Dennys",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/deandennystucuman?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    "whatsapp": "https://www.pedidosya.com.ar/restaurantes/san-miguel-de-tucuman/dean-and-dennys-tucuman-e452bfd8-ca00-4937-869c-8a79d6d37ec3-menu?search=dean+and",
+    "dirección": "Cariola 42",
+    "zona": "Yerba Buena",
+    "tipo": "Cadenas"
+  },
+  {
+    "nombre": "Dean & Dennys",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/deandennystucuman?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    "whatsapp": "https://www.pedidosya.com.ar/restaurantes/san-miguel-de-tucuman/dean-and-dennys-tucuman-e452bfd8-ca00-4937-869c-8a79d6d37ec3-menu?search=dean+and",
+    "dirección": "Av Perón 2300",
+    "zona": "Yerba Buena",
+    "tipo": "Cadenas"
+  },
+  {
+    "nombre": "Mr. Tasty",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/mrtasty.ok?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    "whatsapp": "https://wa.me/5493815585287",
+    "dirección": "25 de Mayo 596",
+    "zona": "Barrio Norte",
+    "tipo": "Cadenas"
+  },
+  {
+    "nombre": "Weiss",
+    "consumo": "local",
+    "instagram": "https://www.instagram.com/weissburger.ar?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    "whatsapp": "https://wa.me/5493816788745",
+    "dirección": "25 de Mayo 724",
+    "zona": "Barrio Norte",
+    "tipo": "Cadenas"
+  }
+]
