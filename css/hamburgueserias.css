@@ -241,12 +241,12 @@ header {
     background: #000;
     border: 1.8px solid #fff;
     border-radius: 14px;
-    padding: 16px;
+    padding: 5px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 16px;
+    gap: 10px;
     width: 100%;
 }
 
@@ -652,7 +652,7 @@ footer p {
     }
 
     .locales-lista {
-        padding: 1px 10px;
+        padding: 1px 7px;
     }
 
     .categoria-header {
@@ -681,20 +681,21 @@ footer p {
 }
 
     .local {
-        padding: 10px;
+        padding: 5px;
         border-radius: 12px;
+        gap:2px
     }
 
     .local h2 {
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
 
     .local p {
-        font-size: 0.9em;
+        font-size: 0.8em;
     }
 
     .local .redes {
-        gap: 10px;
+        gap: 1px;
     }
 
     .local .redes button {
@@ -703,8 +704,8 @@ footer p {
     }
 
     .local .redes img {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
     }
 
     footer {
