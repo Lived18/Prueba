@@ -92,7 +92,7 @@ header {
     display: block;
     width: fit-content;
     margin: 0 auto 20px auto;
-    margin-top: -20px;
+    margin-top: 10px;
     text-align: center;
     font-size: 1.8em;
     font-weight: 850;
@@ -119,9 +119,9 @@ header {
     overflow: hidden;
     flex: 0 0 auto;
     width: 320px;
-    min-width: 140px;
-    max-width: 340px;
-    margin-bottom: 12px;
+    min-width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
 }
 
 #busqueda-locales {
@@ -201,15 +201,21 @@ header {
 
 .categoria-header {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 16px;
+    align-items: flex-start;
     gap: 16px;
     flex-wrap: nowrap;
     width: 100%;
+
 }
 
-.categoria-header h2,
+.categoria-header h2 {
+    flex: 0 0 auto;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    margin: 0;
+}
 .categoria-header h3 {
     flex: 1 1 auto;
     min-width: 0;
@@ -348,7 +354,7 @@ footer p {
 .carrusel-container {
     position: relative;
     width: 100%;
-    margin: px 0;
+    margin: 0px;
     overflow: hidden;
     background-color: #000;
 }
@@ -362,7 +368,7 @@ footer p {
 .carrusel-imagen {
     min-width: 100%;
     aspect-ratio: 16 / 9;
-    object-fit: relati;
+    object-fit: relative;
     display: block;
 }
 
@@ -406,6 +412,7 @@ footer p {
     letter-spacing: 1.5px;
     color: #ffffff;
     text-transform: uppercase;
+
 }
 
 /* ── Wrapper posicionado (para el dropdown) ── */
@@ -652,13 +659,15 @@ footer p {
         flex-direction: column;
         align-items: flex-start;
         margin-bottom: 12px;
+        margin-top: 12px;
+        font-size: 1.3em;
     }
 
 .btn-promos {
     display: block;
     width: fit-content;
     margin: 0 auto 20px auto;
-    margin-top: 0px;
+    margin-top: 15px;
     text-align: center;
     font-size: 1.3em;
     font-weight: 850;
