@@ -397,7 +397,7 @@
             locales.forEach(local => {
                 const zona  = (local.zona    || '').trim();
                 const consumoRaw = (local.consumo || '').trim().toLowerCase();
-                const tipo  = consumoRaw === 'delivery' ? 'delivery' : 'local';
+                const tipo = consumoRaw.includes('delivery') ? 'delivery' : 'local';
 
                 // Todas las cards llevan data-zona y data-tipo (DE AUTOR y CADENAS)
                 const dataAttrs = 'data-zona="' + zona + '" data-tipo="' + tipo + '"';
