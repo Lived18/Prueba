@@ -155,6 +155,7 @@ footer .social {
 
 footer .social a {
   color: #fff;
+  background-color: #222;
   text-decoration: none;
   border: 2px solid #fff;
   padding: 8px 14px;
@@ -167,7 +168,7 @@ footer .social a {
 
 footer .social a:hover {
   background-color: #fff;
-  color: #000;
+  color: #222;
 }
 
 footer p {
