@@ -79,8 +79,8 @@ header {
 }
 
 .header-left button img {
-    height: 250px;
-    width: auto;
+    height: 350px;
+    width: 100%;
     object-fit: contain;
 }
 
@@ -156,7 +156,7 @@ header {
 .banner-hamburguesas {
     position: relative;
     width: 100%;
-    height: 120px;
+    height: 160px;
     overflow: hidden;
     border-bottom: 2px solid #fff;
     display: flex;
@@ -205,17 +205,19 @@ header {
     gap: 16px;
     flex-wrap: nowrap;
     width: 100%;
+    font-family: "Geologica", sans-serif;
 
 }
 
 .categoria-header h2 {
     flex: 0 0 auto;
     color: #fff;
-    font-size: 1.3em;
-    font-weight: 300;
+    font-size: 1.8em;
+    font-weight: 850;
     letter-spacing: 0.5px;
     margin: 0;
     font-family: "Geologica", sans-serif;
+    margin-left: 5px;
 }
 .categoria-header h3 {
     flex: 1 1 auto;
@@ -228,7 +230,7 @@ header {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    
+    font-family: "Geologica", sans-serif;
 }
 
 .locales-grid {
@@ -242,7 +244,7 @@ header {
     background: #000;
     border: 1.7px solid #fff;
     border-radius: 14px;
-    padding: 5px;
+    padding: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -633,6 +635,7 @@ footer p {
         font-size: 1.3em;
         font-family: "Geologica", sans-serif;
         font-weight: 850;
+        margin-left: 5px;
     } 
 
     #buscador-locales {
