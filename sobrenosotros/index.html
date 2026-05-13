@@ -14,6 +14,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Geologica:wght@300;400;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="../css/sobrenosotros.css">
+  <link rel="stylesheet" href="../css/menu.css">
 </head>
 <body>
 
@@ -25,6 +26,26 @@
         </button>
       </div>
     </div>
+
+        <div class="header-right">
+      <div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+      <button class="menu-btn" id="menuBtn" onclick="toggleMenu()" aria-label="Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="dropdown-menu" id="dropdownMenu">
+        <span class="menu-label">Categorías</span>
+        <a href="../index.html">Inicio</a>
+        <a href="/hamburgueserias/index.html">Hamburgueserías</a>
+        <span class="menu-label">Info</span>
+        <a href="/contacto/index.html">Contacto</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScQi7uQRVktxRlYtXYFfk8PAbUVUoTPVC_R9rKiSJU2g-0p_A/viewform?usp=dialog" target="_blank" rel="noopener">Contanos tu Opinión</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVfvzEZTrDfLBePvFMaaIzUtBsdshWhvagwYHzDNZ9cpwaIw/viewform?usp=dialog" target="_blank" rel="noopener">Reportar Problema</a>
+      </nav>
+    </div>
+  </div>
+
   </header>
 
   <main>
@@ -42,7 +63,7 @@
           </svg>
           <span class="divider-line"></span>
         </div>
-        <p class="body-text">¿Dónde lo encuentro? nace de algo simple: queríamos dejar de perder el tiempo buscando.</p>
+        <p class="body-text">Dónde lo encuentro nace de algo simple: queríamos dejar de perder el tiempo buscando.</p>
         <p class="body-text">Queremos que, cuando necesites algo, vayas siempre al mismo lugar.</p>
         <p class="body-text">Sin vueltas: la lista, las direcciones y el botón directo para ir a donde necesitás.</p>
         <p class="highlight-text">Todo en un solo lugar.</p>
@@ -145,6 +166,25 @@
     </div>
     <p>Todos los derechos reservados ©</p>
   </footer>
+
+    <!-- MENU DESPLEGABLE -->
+    <script>
+  function toggleMenu() {
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('dropdownMenu');
+    const overlay = document.getElementById('menuOverlay');
+    const isOpen = menu.classList.contains('open');
+    btn.classList.toggle('open', !isOpen);
+    menu.classList.toggle('open', !isOpen);
+    overlay.classList.toggle('open', !isOpen);
+  }
+
+  function closeMenu() {
+    document.getElementById('menuBtn').classList.remove('open');
+    document.getElementById('dropdownMenu').classList.remove('open');
+    document.getElementById('menuOverlay').classList.remove('open');
+  }
+    </script>
 
 </body>
 </html>

@@ -1,0 +1,138 @@
+
+
+/* HEADER RIGHT */
+.header-right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* BOTÓN HAMBURGUESA */
+.menu-btn {
+  background: none;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transition: background 0.2s;
+  z-index: 1001;
+}
+
+.menu-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.menu-btn span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+/* Animación a X al abrir */
+.menu-btn.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* DROPDOWN */
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  background: #000;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  min-width: 230px;
+  opacity: 0;
+  transform: translateY(-10px) scale(0.97);
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 1000;
+}
+
+.dropdown-menu.open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: all;
+}
+
+/* LINKS DEL MENÚ */
+.dropdown-menu a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 20px;
+  font-size: 0.95em;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #222;
+  transition: background 0.2s, color 0.2s;
+  font-family: 'calsans-regular', Arial, sans-serif;
+  font-weight: 300;
+}
+
+.dropdown-menu a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu a:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* ETIQUETAS DE SECCIÓN */
+.menu-label {
+  display: block;
+  padding: 10px 20px 6px;
+  font-size: 0.7em;
+  letter-spacing: 3px;
+  color: #888;
+  text-transform: uppercase;
+  border-bottom: 1px solid #222;
+  font-family: 'calsans-regular', Arial, sans-serif;
+}
+
+/* OVERLAY - cierra el menú al hacer click afuera */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: none;
+}
+
+.menu-overlay.open {
+  display: block;
+}
+
+/* RESPONSIVE MÓVIL */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    min-width: 190px;
+    right: 0;
+  }
+
+  .dropdown-menu a {
+    padding: 13px 16px;
+    font-size: 0.9em;
+  }
+
+  .menu-label {
+    padding: 9px 16px 5px;
+    font-size: 0.65em;
+  }
+}

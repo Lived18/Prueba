@@ -13,17 +13,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DONDE LO ENCUENTRO</title>
   <link rel="stylesheet" href="css/inicio.css">
+  <link rel="stylesheet" href="css/menu.css">
 </head>
 <body>
-
   <header>
-    <div class="header-content">
-      <div class="header-left">
-        <a href="index.html">
-          <img src="imagenes/Logo-dondeloencuentro.png" alt="DONDE LO ENCUENTRO">
-        </a>
-      </div>
+  <div class="header-content">
+    <div class="header-left">
+      <a href="index.html">
+        <img src="imagenes/Logo-dondeloencuentro.png" alt="DONDE LO ENCUENTRO">
+      </a>
     </div>
+
+    <!-- MENÚ DESPLEGABLE -->
+    <div class="header-right">
+      <div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+      <button class="menu-btn" id="menuBtn" onclick="toggleMenu()" aria-label="Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="dropdown-menu" id="dropdownMenu">
+        <span class="menu-label">Categorías</span>
+        <a href="hamburgueserias">Hamburgueserías</a>
+        <span class="menu-label">Info</span>
+        <a href="sobrenosotros">Sobre Nosotros</a>
+        <a href="contacto">Contacto</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScQi7uQRVktxRlYtXYFfk8PAbUVUoTPVC_R9rKiSJU2g-0p_A/viewform?usp=dialog" target="_blank" rel="noopener">Contanos tu Opinión</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVfvzEZTrDfLBePvFMaaIzUtBsdshWhvagwYHzDNZ9cpwaIw/viewform?usp=dialog" target="_blank" rel="noopener">Reportar Problema</a>
+      </nav>
+    </div>
+  </div>
+</header>
   </header>
 
   <h1>BIENVENIDOS</h1>
@@ -49,6 +69,7 @@
     </a>
   </section>
 
+
   <footer>
     <div class="social">
       <a href="https://docs.google.com/forms/d/e/1FAIpQLScQi7uQRVktxRlYtXYFfk8PAbUVUoTPVC_R9rKiSJU2g-0p_A/viewform?usp=dialog" target="_blank" rel="noopener">Contanos tu Opinion</a>
@@ -59,6 +80,22 @@
     </div>
     <p>Todos los derechos reservados ©</p>
   </footer>
+<script>
+  function toggleMenu() {
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('dropdownMenu');
+    const overlay = document.getElementById('menuOverlay');
+    const isOpen = menu.classList.contains('open');
+    btn.classList.toggle('open', !isOpen);
+    menu.classList.toggle('open', !isOpen);
+    overlay.classList.toggle('open', !isOpen);
+  }
 
+  function closeMenu() {
+    document.getElementById('menuBtn').classList.remove('open');
+    document.getElementById('dropdownMenu').classList.remove('open');
+    document.getElementById('menuOverlay').classList.remove('open');
+  }
+</script>
 </body>
 </html>
