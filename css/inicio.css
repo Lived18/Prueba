@@ -28,31 +28,43 @@ header {
 }
 
 .header-content {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 0 10px;
-  height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    height: 100%;
 }
 
 .header-left {
-  display: flex;
-  align-items: center;
-  height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1 1 auto;
+    height: 100%;
 }
 
 .header-left a {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  text-decoration: none;
+    font-size: 2em;
+    font-weight: 300;
+    background: none;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    height: auto;
 }
 
 .header-left a img {
-  height: 250px;
-  width: auto;
-  object-fit: contain;
-
+    height: 250px;
+    width: 100%;
+    object-fit: contain;
 }
 
 /* OCULTAR "BIENVENIDOS" */
