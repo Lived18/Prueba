@@ -7,6 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/promos.css">
     <link rel="stylesheet" href="../css/menu.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LLS0V7R0J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LLS0V7R0J');
+    </script>
 </head>
 <body>
 
@@ -40,7 +48,7 @@
   </div>
 
     </header>
-    <button class="btn-volver" onclick="history.back()">← Volver</button>
+    <button class="btn-volver" onclick="window.location.href='../hamburgueserias/index.html'">← Volver</button>
 
 
 
@@ -54,49 +62,49 @@
         <div class="promo-card">
             <img src="../imagenes/promociones 1.PNG" alt="Promo 1">
             <div class="link-directo">
-                <button onclick="window.location.href='https://wa.me/5493816277158'">PEDIR AQUI</button>
+                <button onclick="rastrearClicPromo('Promo 1', 'whatsapp', 'https://wa.me/5493816277158')">PEDIR AQUI</button>
             </div>    
         </div>
 
         <div class="promo-card">
             <img src="../imagenes/promociones 2.jpeg" alt="Promo 2">
             <div class="link-directo">
-                <button onclick="window.location.href='https://wa.me/5493813359728'">PEDIR AQUI</button>
+                <button onclick="rastrearClicPromo('Promo 2', 'whatsapp', 'https://wa.me/5493813359728')">PEDIR AQUI</button>
             </div>
         </div>
 
         <div class="promo-card">
             <img src="../imagenes/promociones 3.jpeg" alt="Promo 3">
             <div class="link-directo">
-                <button onclick="window.location.href='https://wa.me/5493813671917'">PEDIR AQUI</button>
+                <button onclick="rastrearClicPromo('Promo 3', 'whatsapp', 'https://wa.me/5493813671917')">PEDIR AQUI</button>
             </div>
         </div>
 
                 <div class="promo-card">
             <img src="../imagenes/promociones 4.jpeg" alt="Promo 4">
             <div class="link-directo">
-                <button onclick="window.location.href='https://wa.me/5493813020962'">PEDIR AQUI</button>
+                <button onclick="rastrearClicPromo('Promo 4', 'whatsapp', 'https://wa.me/5493813020962')">PEDIR AQUI</button>
             </div>
         </div>
 
                         <div class="promo-card">
             <img src="../imagenes/promociones 5.jpeg" alt="Promo 5">
             <div class="link-directo">
-                <button onclick="window.location.href='https://wa.me/5493816161659'">PEDIR AQUI</button>
+                <button onclick="rastrearClicPromo('Promo 5', 'whatsapp', 'https://wa.me/5493816161659')">PEDIR AQUI</button>
             </div>
         </div>
 
                         <div class="promo-card">
             <img src="../imagenes/promociones 6.PNG" alt="Promo 6">
             <div class="link-directo">
-                <button onclick="window.location.href='https://wa.me/5493814752804'">PEDIR AQUI</button>
+                <button onclick="rastrearClicPromo('Promo 6', 'whatsapp', 'https://wa.me/5493814752804')">PEDIR AQUI</button>
             </div>
         </div>
 
                         <div class="promo-card">
             <img src="../imagenes/promociones 7.PNG" alt="Promo 7">
             <div class="link-directo">
-                <button onclick="window.location.href='https://wa.me/5493813881160'">PEDIR AQUI</button>
+                <button onclick="rastrearClicPromo('Promo 7', 'whatsapp', 'https://wa.me/5493813881160')">PEDIR AQUI</button>
             </div>
         </div>
 
@@ -133,6 +141,16 @@
     document.getElementById('menuBtn').classList.remove('open');
     document.getElementById('dropdownMenu').classList.remove('open');
     document.getElementById('menuOverlay').classList.remove('open');
+  }
+
+  // RASTREO DE CLICS EN PROMOS
+  function rastrearClicPromo(nombrePromo, canal, url) {
+    gtag('event', 'click_promo', {
+      'promo': nombrePromo,
+      'canal': canal,
+      'pagina': 'promos'
+    });
+    window.location.href = url;
   }
     </script>
 

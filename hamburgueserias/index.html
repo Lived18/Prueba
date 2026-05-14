@@ -18,6 +18,15 @@
 
     
 
+    <!-- Google tag (gtag.js) -->
+    <script async src=\"https://www.googletagmanager.com/gtag/js?id=G-4LLS0V7R0J\"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LLS0V7R0J');
+    </script>
+
     <!-- ── ESTILOS DEL FILTRO ── -->
     <style>
         .filtro-category-header {
@@ -219,16 +228,16 @@
     <!-- CARRUSEL DE IMÁGENES -->
     <div class="carrusel-container">
         <div class="carrusel-wrapper">
-            <a href="https://wa.me/5493812108305" class="carrusel-link">
+            <a href="https://wa.me/5493812108305" onclick="rastrearCarrusel('Broda', 'Carrusel 1', this.href); return false;" class="carrusel-link">
                 <img class="carrusel-imagen" src="../imagenes/carrusel 1.PNG" alt="Hamburguesa 1">
             </a>
-            <a href="https://wa.me/5493815859215" class="carrusel-link">
+            <a href="https://wa.me/5493815859215" onclick="rastrearCarrusel('Big Yola', 'Carrusel 2', this.href); return false;" class="carrusel-link">
                 <img class="carrusel-imagen" src="../imagenes/carrusel 2.jpeg" alt="Hamburguesa 2">
             </a>
-            <a href="https://wa.me/5493816820505" class="carrusel-link">
+            <a href="https://wa.me/5493816820505" onclick="rastrearCarrusel('Billy Bob Burgers', 'Carrusel 3', this.href); return false;" class="carrusel-link">
                 <img class="carrusel-imagen" src="../imagenes/promo 3.png" alt="Hamburguesa 3">
             </a>
-                        <a href="https://wa.me/5493816820505" class="carrusel-link">
+                        <a href="https://wa.me/5493816820505" onclick="rastrearCarrusel('Billy Bob Burgers', 'Carrusel 4', this.href); return false;" class="carrusel-link">
                 <img class="carrusel-imagen" src="../imagenes/promo 4.png" alt="Hamburguesa 4">
             </a>
 
@@ -272,6 +281,34 @@
             document.getElementById('menuBtn').classList.remove('open');
             document.getElementById('dropdownMenu').classList.remove('open');
             document.getElementById('menuOverlay').classList.remove('open');
+        }
+
+        // ═══════════════════════════════════════════════
+        //  RASTREO DE CLICS EN LOCALES (INSTAGRAM/WHATSAPP)
+        // ═══════════════════════════════════════════════
+        function rastrearClicLocal(nombreLocal, canal, url) {
+            gtag('event', 'click_contacto_local', {
+                'local_nombre': nombreLocal,
+                'canal': canal,
+                'pagina': 'hamburgueserias'
+            });
+            if (canal === 'instagram') {
+                window.location.href = url;
+            } else if (canal === 'whatsapp') {
+                window.open(url, '_blank');
+            }
+        }
+
+        // ═══════════════════════════════════════════════
+        //  RASTREO DE CLICS EN CARRUSEL
+        // ═══════════════════════════════════════════════
+        function rastrearCarrusel(nombreLocal, posicion, url) {
+            gtag('event', 'click_carrusel', {
+                'local_nombre': nombreLocal,
+                'posicion': posicion,
+                'pagina': 'hamburgueserias'
+            });
+            window.open(url, '_blank');
         }
 
         // ═══════════════════════════════════════════════
@@ -459,10 +496,10 @@
                             <p>${local.consumo}</p>
                         </div>
                         <div class="redes">
-                            <button onclick="window.location.href='${local.instagram}'" title="Instagram">
+                            <button onclick="rastrearClicLocal('${local.nombre}', 'instagram', '${local.instagram}')" title="Instagram">
                                 <img src="../imagenes/ig icono new.png" alt="Instagram">
                             </button>
-                            <button onclick="window.open('${local.whatsapp}', '_blank')" title="WhatsApp">
+                            <button onclick="rastrearClicLocal('${local.nombre}', 'whatsapp', '${local.whatsapp}')" title="WhatsApp">
                                 <img src="../imagenes/whats icono.png" alt="WhatsApp">
                             </button>
                         </div>
