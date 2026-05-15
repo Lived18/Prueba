@@ -38,7 +38,7 @@ body {
 header {
   background-color: #000;
   color: #fff;
-  padding: 0;
+  padding: 0 10px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -54,7 +54,7 @@ header {
   width: 100%;
   max-width: none;
   margin: 0;
-  padding: 0 10px;
+  padding: 0;
   box-sizing: border-box;
   height: 100%;
 }

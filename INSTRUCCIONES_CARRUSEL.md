@@ -96,4 +96,3 @@ Si quieres que se mueva más rápido o más lento:
 - Para móviles, la altura se reduce automáticamente a 250px
 - Las imágenes se ajustan automáticamente (no se distorsionan)
 
-¡Listo! Ahora solo reemplaza las rutas de las imágenes con las tuyas.
