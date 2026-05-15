@@ -170,6 +170,15 @@
     "zona": "Zona Oeste",
     "tipo": "De Autor"
   },
+    {
+    "nombre": "El Patron Burger",
+    "consumo": "Solo Retiro / Delivery",
+    "instagram": "https://www.instagram.com/elpatron_burger.ok?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    "whatsapp": "https://wa.me/5493812126498?text=Hola%21%20Vengo%20de%20Donde%20Lo%20Encuentro%2C%20quiero%20hacer%20un%20pedido%3A",
+    "dirección": "Maipu 2200",
+    "zona": "Barrio Norte",
+    "tipo": "De Autor"
+  },
   {
     "nombre": "Family Burgers",
     "consumo": "Consumo en el local",
@@ -378,6 +387,24 @@
     "tipo": "De Autor"
   },
   {
+    "nombre": "Ohana Burguer",
+    "consumo": "Consumo en el local",
+    "instagram": "https://www.instagram.com/ohanasangucheria?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    "whatsapp": "https://wa.me/5493813599365?text=Hola%21%20Vengo%20de%20Donde%20Lo%20Encuentro%2C%20quiero%20hacer%20un%20pedido%3A",
+    "dirección": "Av Siria 1765",
+    "zona": "Barrio Norte",
+    "tipo": "De Autor"
+  },
+    {
+    "nombre": "Ohana Burguer",
+    "consumo": "Consumo en el local",
+    "instagram": "https://www.instagram.com/ohanasangucheria?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    "whatsapp": "https://wa.me/5493816492705?text=Hola%21%20Vengo%20de%20Donde%20Lo%20Encuentro%2C%20quiero%20hacer%20un%20pedido%3A",
+    "dirección": "Martín blanco y Av Alfonsin",
+    "zona": "Zona Oeste",
+    "tipo": "De Autor"
+  },
+  {
     "nombre": "Papos Burger",
     "consumo": "Consumo en el local",
     "instagram": "https://www.instagram.com/papo.sburgers?utm_source=ig_web_button_share_sheet&igsh=N2Q2ajNhOW1uaWhy",
@@ -519,6 +546,24 @@
     "whatsapp": "https://wa.me/5493813580723?text=Hola%21%20Vengo%20de%20Donde%20Lo%20Encuentro%2C%20quiero%20hacer%20un%20pedido%3A",
     "dirección": "Corrientes 642",
     "zona": "Barrio Norte",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Tata Burgers",
+    "consumo": "Solo Retiro / Delivery",
+    "instagram": "https://www.instagram.com/tata.burgerss?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    "whatsapp": "https://wa.me/5493815794514?text=Hola%21%20Vengo%20de%20Donde%20Lo%20Encuentro%2C%20quiero%20hacer%20un%20pedido%3A",
+    "dirección": "Higueritas 2549",
+    "zona": "Yerba Buena",
+    "tipo": "De Autor"
+  },
+  {
+    "nombre": "Triple Nico Burgers",
+    "consumo": "Solo Retiro / Delivery",
+    "instagram": "https://www.instagram.com/triplenicoburgers?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    "whatsapp": "https://wa.me/5493813926668?text=Hola%21%20Vengo%20de%20Donde%20Lo%20Encuentro%2C%20quiero%20hacer%20un%20pedido%3A",
+    "dirección": "San José",
+    "zona": "Yerba Buena",
     "tipo": "De Autor"
   },
   {
