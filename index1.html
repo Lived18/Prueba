@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LLS0V7R0J"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4LLS0V7R0J');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DONDE LO ENCUENTRO</title>
+  <link rel="stylesheet" href="css/inicio.css">
+  <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+  <header>
+  <div class="header-content">
+    <div class="header-left">
+      <a href="index.html">
+        <img src="imagenes/Logo-dondeloencuentro.png" alt="DONDE LO ENCUENTRO">
+      </a>
+    </div>
+
+    <!-- MENÚ DESPLEGABLE -->
+    <div class="header-right">
+      <div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+      <button class="menu-btn" id="menuBtn" onclick="toggleMenu()" aria-label="Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="dropdown-menu" id="dropdownMenu">
+        <span class="menu-label">Categorías</span>
+        <a href="hamburgueserias">Hamburgueserías</a>
+        <a href="../promos/index.html">Promos</a>
+        <span class="menu-label">Info</span>
+        <a href="sobrenosotros">Sobre Nosotros</a>
+        <a href="contacto">Contacto</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScQi7uQRVktxRlYtXYFfk8PAbUVUoTPVC_R9rKiSJU2g-0p_A/viewform?usp=dialog" target="_blank" rel="noopener">Contanos tu Opinión</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVfvzEZTrDfLBePvFMaaIzUtBsdshWhvagwYHzDNZ9cpwaIw/viewform?usp=dialog" target="_blank" rel="noopener">Reportar Problema</a>
+      </nav>
+    </div>
+  </div>
+</header>
+  </header>
+
+  <h1>BIENVENIDOS</h1>
+
+  <nav>
+    <ul>
+      <li>
+        <a href="hamburgueserias" class="img-button">
+          <img src="imagenes/Imagen Hamburguesa.png" alt="Comida - Hamburguesas">
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <h1>VER HAMBURGUESERÍAS</h1>
+
+  <section class="social-center">
+    <a href="https://www.instagram.com/dondeloencuentro_tuc?igsh=MTF0bmdpN2plMmt6aw==" target="_blank" rel="noopener">
+      <img src="imagenes/Instagram.png" alt="Instagram">
+    </a>
+    <a href="https://www.tiktok.com/@dondeloencuentro_tuc?_r=1&_t=ZS-95azBA5Uh09" target="_blank" rel="noopener">
+      <img src="imagenes/Tik Tok.png" alt="TikTok">
+    </a>
+  </section>
+
+
+  <footer>
+    <div class="social">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScQi7uQRVktxRlYtXYFfk8PAbUVUoTPVC_R9rKiSJU2g-0p_A/viewform?usp=dialog" target="_blank" rel="noopener">Contanos tu Opinion</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVfvzEZTrDfLBePvFMaaIzUtBsdshWhvagwYHzDNZ9cpwaIw/viewform?usp=dialog" target="_blank" rel="noopener">Reportar Problema</a>
+      <a href="contacto">Contacto</a>
+      <a href="sobrenosotros">Sobre Nosotros</a>
+      
+    </div>
+    <p>Todos los derechos reservados ©</p>
+  </footer>
+<script>
+  function toggleMenu() {
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('dropdownMenu');
+    const overlay = document.getElementById('menuOverlay');
+    const isOpen = menu.classList.contains('open');
+    btn.classList.toggle('open', !isOpen);
+    menu.classList.toggle('open', !isOpen);
+    overlay.classList.toggle('open', !isOpen);
+  }
+
+  function closeMenu() {
+    document.getElementById('menuBtn').classList.remove('open');
+    document.getElementById('dropdownMenu').classList.remove('open');
+    document.getElementById('menuOverlay').classList.remove('open');
+  }
+</script>
+</body>
+</html>
